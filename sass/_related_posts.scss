@@ -1,0 +1,25 @@
+body.single section.related-posts a.blue-overlay{
+	margin-bottom:0px;
+}
+
+
+#paging{
+	#next-post-link{
+		a{
+			background:$salmon url("../img/icons/previous_article_arrow.png") no-repeat 8px center;
+			padding:.5em 1em .5em 1.5em;
+			&:hover{
+				background:darken($salmon, 5%) url("../img/icons/previous_article_arrow.png") no-repeat 8px center;
+			}
+		}
+	}
+	#previous-post-link{
+		a{
+			background:$salmon url("../img/icons/next_article_arrow.png") no-repeat 138px center;
+			padding:.5em 1.5em .5em 1em;
+			&:hover{
+				background:darken($salmon, 5%) url("../img/icons/next_article_arrow.png") no-repeat 138px center;
+			}
+		}
+	}
+}

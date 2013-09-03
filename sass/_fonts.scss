@@ -1,0 +1,34 @@
+//
+// proxima nova condensed
+//
+$proxima-nova-condensed: "proxima-nova-alt-condensed", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+// semibold = 600
+// bold = 700
+
+//
+// proxima nova 
+//
+$proxima-nova: "proxima-nova", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+// regular = 400
+// semibold = 600
+// bold = 700
+// black = 800
+
+.center-text{
+	text-align:center;
+}
+
+.auto-center{
+	display:block;
+	margin:0 auto;
+}
+
+.pn-condensed{
+	font-family:$proxima-nova-condensed;
+}
+.pn{
+	font-family:$proxima-nova;
+}
+.uppercase{
+	text-transform:uppercase;
+}

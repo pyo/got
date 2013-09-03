@@ -1,0 +1,162 @@
+a.blue-overlay{
+	
+	position:relative;
+	display:block;
+
+	img{
+		display:block;
+	}
+	span.details{
+		display:block;
+		color:#fff;
+		position:absolute;
+		bottom:0;
+		left:0;
+		right:0;
+		padding:8px;
+		background-color:#1b89a5;
+		background-color:rgba(27,137,165,.8);
+		
+	}
+	span.added{
+		font-size:11px;
+		text-transform:uppercase;
+	}
+	span.title{
+		font-weight:700;
+		font-size:14px;
+		display:block;
+		line-height:18px;
+	}
+}
+
+body.single a.blue-overlay{
+	margin-bottom:10px;
+	img{
+		margin-bottom:0!important;
+	}
+}
+
+/*body.tax-vertical #hero li.large{
+	height:430px;
+}*/
+//hero
+#hero{
+	background-color:#fff;
+	padding:10px 0 0;
+	
+	a{
+		display:block;
+		position:relative;
+		@include text-shadow(0px 1px 0px rgba(0,0,0,.2));
+		&.banner{
+			position:absolute;
+		}
+	}
+	
+	li{
+		display:block;
+		float:left;
+		margin-bottom:10px;
+		position:relative;
+		span.details{
+			padding:12px 20px;
+			
+		}
+	}
+	li.large{
+		width:660px;
+		margin-right:20px;
+		height:358px;
+		span.added{
+			font-size:12px;
+		}
+		span.title{
+			font-weight:700;
+			font-size:24px;
+			line-height:28px;
+		}
+		
+	}
+	li.small{
+		width:320px;
+		span.details{
+			padding:12px 20px 14px;
+		}
+
+	}
+	li.small, li.half{
+		
+	}
+}
+
+#hero li.nmr{
+	margin-right:0px;
+}
+
+ul.hero_layout_1{
+	li{
+		width:1000px;
+		margin-right:0px;
+		span.details{
+			padding:20px 20px 24px;
+		}
+		span.added{
+			display:block;
+			margin-bottom:5px;
+			font-size:12px;
+		}
+		span.title{
+			font-weight: 800;
+			font-size: 45px;
+			line-height: 1em;
+		}
+	}
+}
+ul.hero_layout_2{
+	
+}
+li.half{
+	margin-right:20px;
+	width:490px;
+}
+ul.hero_layout_3{
+	
+}
+ul.hero_layout_4{
+	
+}
+
+#hero .title{
+	display:block;
+}
+
+#hero .third{
+	width:320px;
+	margin-right:20px;
+	&.small{
+		height:155px;
+	}
+	&.featured{
+		height:320px;
+		.added{
+			font-size:12px;
+		}
+		.title{
+			display:block;
+			font-weight:700;
+			font-size:18px;
+			line-height:24px;
+		}
+	}
+}
+
+
+ul.hero_layout_5{
+	
+}
+ul.hero_layout_6{
+	li{
+		margin-right:20px;	
+	}	
+}

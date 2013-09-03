@@ -1,0 +1,122 @@
+.slider{
+	li img{
+		display:block;
+		margin:0 auto;
+	}
+}
+
+#carousel-wrapper{
+	position:relative;
+	height:91px;
+}
+
+.carousel{
+	background-color:#f2f4f3;
+	border:1px solid #dadada;
+	left:-11px;
+	height:92px;
+	padding:8px 18px;
+	position:absolute;
+	width:1042px;
+	margin-top:-1px;
+
+	ul.slides{
+		height:72px;
+		overflow:hidden;
+	}
+
+	ul.slides li{
+		margin-right:10px;
+		position:relative;
+		overflow:hidden;
+		width:116px;
+		height:72px;
+		float:left;
+
+		a{
+			display:block;
+			height:100%;
+		}
+	}
+	
+	.description{
+		color:#fff;
+		background:transparent url('../img/bg_blue_trans.png') repeat left top;
+		display:block;
+		font-size:10px;
+		position:absolute;
+		padding:4px;
+		bottom:0;
+		left:0;
+		right:0;
+		text-transform:uppercase;
+		line-height:1.1em;
+		font-weight:600;
+	}
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;		
+		border-bottom: 5px solid transparent;
+		margin: 0;
+		z-index: 2;
+		bottom: -6px;
+	}
+
+	&:before{
+		border-left: 10px solid #ccc; 
+		right: 0px;
+	}
+
+	&:after{
+		border-right: 10px solid #ccc; 
+		left: 0px;
+	}
+
+
+}
+.flex-viewport{
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+	li{
+		float:left;
+	}
+}
+.flex-viewport .slides{
+	overflow:hidden;
+}
+.carousel ul.flex-direction-nav{
+	a{
+		display:block;
+		position:absolute;
+		width:14px;
+		height:92px;
+		overflow:hidden;
+		cursor:pointer;
+		z-index:10;
+		top:-1px;
+		text-indent:-9999px;
+		@include opacity(.40);
+		@include transition-property(opacity);
+		@include transition-duration(.5s);
+		@include transition-timing-function(ease-in); 
+		&.flex-prev{	
+			left:0;
+			background:#fff url('../img/icons/arrow_left.png') no-repeat left top!important;
+			&.flex-disabled{
+				background:#fff url('../img/icons/arrow_left_inactive.png') no-repeat left top;
+			}
+		
+		}
+		&.flex-next{
+			&.flex-disabled{
+				background:#fff url('../img/icons/arrow_right_inactive.png') no-repeat left top;
+			}
+			right:0;
+			background:#fff url('../img/icons/arrow_right.png') no-repeat left top!important;
+		}
+	}
+}

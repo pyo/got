@@ -1,0 +1,97 @@
+div.social_media_dropdown{
+	background:#fff;
+	@include border-radius(3px);
+	border:1px solid #e1e1e1;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	padding:6px 8px;
+	height:32px;
+	line-height:20px!important;
+	cursor:pointer;
+	position:relative;
+	.open-share strong{
+		font-weight:800;
+		font-size:23px;
+	}
+	.open-share{
+		background:transparent url("../img/icons/share_icon.png") no-repeat left 0;
+		height:auto;
+		margin:0;
+	}
+	.dropdown{
+		display: none;
+		width: 154px;
+		position: absolute;
+		top: 29px;
+		background: #fff;
+		left: -1px;
+		z-index: 5;
+		border-left: 1px solid #e1e1e1;
+		border-bottom: 1px solid #e1e1e1;
+		border-right: 1px solid #e1e1e1;
+		@include border-bottom-right-radius(3px);
+		@include border-bottom-left-radius(3px);
+	}
+	ul.social-buttons{
+		li{
+			padding:10px 0 0px 10px;
+		}
+		padding-bottom:10px;
+	}
+}
+
+#single-social-dropdown{
+	right:-1px;
+	width:auto!important;
+	z-index:99999;
+}
+
+
+.st-twitter-counter, .stMainServices{
+	height:22px!important;
+}
+.stButton .stHBubble{
+	height:21px!important;
+}
+
+.single, .page{
+	.st_plusone_hcount{
+		margin-left:3px;
+	}
+	#single-social-dropdown{
+		ul.inline-block{
+			margin-top:4px;
+		}
+		ul.inline-block li{
+			display:block;
+			clear:both;
+			padding-left:4px;
+			margin-bottom:8px;
+		}
+	}
+}
+
+.social-buttons { display: block; list-style: none; padding: 0; margin: 20px; }
+.social-buttons > li { display: block; margin: 0; padding: 10px; float: left; }
+.social-buttons .socialite { display: block; position: relative; background: url('../img/social-sprite.png') 0 0 no-repeat; }
+.social-buttons .socialite-loaded { background: none !important; }
+
+.social-buttons .twitter-share { width: 84px; height: 22px; background-position: 0 0; }
+.social-buttons .googleplus-one { width: 68px; height: 22px; background-position: -92px 0; }
+.social-buttons .facebook-like { width: 84px; height: 22px; background-position: -168px 0; }
+.social-buttons .linkedin-share { width: 60px; height: 22px; background-position: -261px 0; }
+.social-buttons .pinterest-pinit{
+	width:68px;
+	height:22px;
+	background-position:-332px 0;
+}
+	
+.vhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+.header-banner .social-buttons > li {
+	float:none;
+	clear:both;
+	width:150px!important;
+}

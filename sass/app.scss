@@ -1,0 +1,546 @@
+// You custom settings file to override Foundation defaults
+@import "fonts";
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+@import "compass/css3";
+@import "foundation/settings";
+@import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+@import "foundation/mixins/clearfix";
+@import "foundation/mixins/css-triangle";
+@import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+@import "foundation/mixins/respond-to";
+@import "foundation/mixins/semantic-grid";
+
+@import "modular-scale";
+@import "foundation/common/globals";
+
+// Must include the grid for any responsiveness
+
+@import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+@import "foundation/common/typography";
+@import "foundation/common/forms";
+
+// Control which components you get ifm customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+// @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+
+$eaeaea: #eaeaea;
+$navBorder:#1087a5;
+$salmon:#d7433f;
+
+
+
+@import "reset";
+@import "utilities";
+@import "forms";
+@import "ui";
+@import "sprites";
+@import "hero";
+@import "hotrightnow";
+@import "carousel";
+@import "partnerLinks";
+@import "social_media_dropdown";
+@import "fancybox";
+@import "related_posts";
+
+.blog ol{
+	list-style:none;
+}
+
+/*** 
+ * Body
+ */
+body{
+	background:#fcfcfc;
+	margin-top:50px;
+	font-family:$proxima-nova;
+	font-weight:400;
+} 
+
+#bg_wrapper{
+	//background:#fff url('../img/bg_main.jpg') repeat-y 679px top;
+	background:#fff url('../img/1px_eaeaea.gif') repeat-y 679px top;
+}
+
+#main{
+	border-left:1px solid #dedede;
+	border-right:1px solid #dedede;
+	border-top:1px solid #dedede;
+	width:1022px;
+	margin:-30px auto 0;
+	position:relative;
+	z-index:2;	
+	//@include box-shadow(0 20px 40px rgba(0,0,0,0.1));
+}
+
+.row{
+	min-width:1020px;
+}
+
+.pad-top{
+	padding-top:10px;
+}
+
+#primary{
+	padding-bottom:1.5em; 
+	blockquote, p, .eighteen.columns{
+		font-size:16px;
+		line-height:1.4em;
+	}  
+	blockquote, img, p{
+		margin-bottom:1.4em;
+	}
+}
+
+#primary .post-box .details a.post-edit-link {
+	display: inline;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+img.alignright{
+  float:right;
+  margin:0 0 1em 1em;
+}
+img.alignleft{
+  float:left;
+  margin:0 1em 1em 0;
+}
+img.aligncenter {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+a img.alignright {
+  float:right;
+  margin:0 0 1em 1em;
+}
+a img.alignleft {
+  float:left;
+  margin:0 1em 1em 0;
+}
+a img.aligncenter {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+a img.alignnone {
+  border:none;
+}
+
+.wp-caption{
+  background:#fff;
+  border:1px solid #ddd;
+  max-width:98%; /* Image does not overflow the content area */
+  padding:10px 0 10px 10px;
+  text-align:left;
+	-webkit-box-shadow:4px 4px 0px 0px rgba(0, 0, 0, .05);
+	-moz-box-shadow:4px 4px 0px 0px rgba(0, 0, 0, .05);
+	box-shadow:4px 4px 0px 0px rgba(0, 0, 0, .05);  
+}
+
+.wp-caption.alignnone{
+  margin:5px 20px 20px 0;
+}
+
+.wp-caption.alignleft{
+	float:left;
+  margin:5px 20px 20px 0;
+}
+
+.wp-caption.alignright{
+	float:right;
+  margin:5px 0 20px 20px;
+}
+
+.wp-caption img{
+  border:0 none;
+  height:auto;
+  margin:0;
+  max-width:98%;
+  padding:0;
+  width:auto;
+}
+
+.wp-caption p.wp-caption-text{
+	border-top:1px solid #ddd;
+  font-size:11px;
+  line-height:17px;
+  margin:10px 10px 0 0;
+  padding:5px 4px 5px;
+	font-weight:bold;
+}
+
+dd.gallery-caption{
+display:none;
+}
+
+//
+// ads
+//
+#article-row .eighteen{
+	//min-height:624px;
+	a{
+		color:$salmon;
+		&:hover, &:focus{
+			color:$salmon;
+			text-decoration:underline;
+		}
+	}
+}
+
+#banner-ad-wrapper{
+	display:block;
+	width: 728px;
+	height: 90px;
+	overflow: visible;
+	background: none !important;
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	vertical-align:baseline;
+}
+
+#skyscrapper-wrapper{
+	position:relative;
+	padding-top:10px;
+	height:600;
+	left:0;
+	width:160px;
+	margin-bottom:10px;
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	vertical-align:baseline;
+}
+
+span.latest_icon{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	background:transparent url('../img/icons/the_latest_icon.png') no-repeat left top;
+	height:33px;
+	width:45px;
+	margin-top:-3px;
+}
+
+#article-author{
+	margin: 3px 0 0 5px!important;
+	font-size: 12px!important;
+	display: inline-block;
+	vertical-align: middle;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+}
+.video{
+	width:660px;
+	position:relative;
+	cursor:pointer;
+	img{
+		margin:0;
+		z-index:1;
+	}
+	margin-bottom:1.4em;
+	&:hover .play_button {
+	  opacity:1;
+	}
+}
+.play_button{
+	display:block;
+	position:absolute;
+	left:50%; 
+	top:50%; 
+	margin:-50px 0 0 -60px;
+	background:transparent url('../img/button_play.png') no-repeat left top;
+	z-index:4;
+	width:115px;
+	height:100px;
+	opacity:.5;
+}
+
+div.wp-caption.alignright{
+	margin-left:10px;
+	margin-bottom:10px;
+}
+
+div.wp-caption.alignleft{
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+#primary p iframe{
+	margin-bottom:0px;
+}
+
+#sidebar-ad{
+	padding-bottom:10px;
+	position:relative;
+	z-index:4;
+	height:260px;
+	box-sizing:content-box;
+	vertical-align:baseline;
+	-moz-box-sizing:content-box;
+}
+
+
+
+.single #sidebar{
+	margin-top:-1px;
+}
+.single #featuredImage, .page #featuredImage{
+	margin-bottom:0px;
+}
+.single .header-banner,.page .header-banner {
+	margin-bottom:10px;
+
+}
+.single #main h1, .page #main h1{
+	font-weight:800;
+	font-size:42px;
+	margin:24px 0 16px;
+}
+.single iframe, .page iframe {
+	margin-bottom:1.4em;
+}
+
+.single.single-format-gallery #main h1, .page.page-format-gallery #main h1{
+	font-size:2em;
+}
+
+.list-post-type li{
+	img{
+		margin-bottom:10px!important;
+	}
+	margin:0 0 1.4em;
+}
+
+.partner-links ul li{
+  margin:0 0 0.7em;
+    &.head a{
+      color:$salmon;
+      font-weight:700!important;
+      font-size:18px!important;
+  }
+}
+
+#featured-articles-section {
+	li{
+		border-bottom:1px solid #eaeaea;
+		&.last{
+			border-bottom:none;
+		}
+	}
+	a{
+		font-weight:700;
+		display:block;
+		line-height:18px;
+		margin:8px 0 10px;
+	}
+	a.term_link{
+		color:#fff;
+		background-color:$salmon;
+		display: inline-block;
+		*display:inline;
+		*zoom:1;
+		padding: 1px 5px;
+		margin: 0;
+		position: relative;
+		top: -1px;
+		&:hover, &:focus{
+			background-color:darken($salmon, 5%);
+		}
+		&:visited{
+			color:#fff;
+		}
+	}
+}
+
+footer{
+	background-color:#2b3c47;
+	z-index:100001;
+	@include box-shadow(inset 0 20px 40px rgba(0,0,0,.2));
+	h1.got_logo{
+		background:transparent url('../img/icons/bg_footer_h1.jpg') no-repeat center center;
+		width:200px;
+		height:145px;
+	}
+	input[type="text"]{
+		width:272px;
+		margin:8px 8px 0 30px;
+		display:inline-block;
+		*display:inline;
+		*zoom:1;
+		vertical-align:middle;
+	}
+	span.search_shadow{
+		background:transparent url('../img/icons/search_shadow.png') no-repeat left top;
+		width:23px;
+		display:inline-block;
+		*display:inline;
+		*zoom:1;
+		vertical-align:middle;
+		height:82px;
+	}
+	span.search_icon{
+		display:inline-block;
+		*display:inline;
+		vertical-align:middle;
+		*zoom:1;
+		margin:8px 0 0 -12px;
+	}
+	a.menu-header{
+		font-size:18px;
+	}
+	.pad-top{
+		padding-bottom:10px;
+		a.menu-header{
+			margin:0 14px;
+		}
+	} 
+}
+
+
+#lower-footer{
+	background-color:#000000;
+}
+
+.open-share{
+	background:transparent url('../img/icons/share_icon.png') no-repeat left 13px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	height:45px;
+	margin-left:10px;
+	padding-left:25px;
+}
+
+.black-background{   
+	position:relative;
+	background-color:#000;
+	color:#fff;
+	h1,h2,h3,h4,h5,h6,li,p{
+		color:#fff;
+	}
+	&.gallery{
+		padding-bottom:24px;
+		height:521px;
+		overflow:hidden;
+
+		.columns{
+			height:521px;
+		}
+		h1{
+			margin:20px 0;
+			font-size:30px!important;
+		}
+		h3{
+			font-size:18px;
+		}
+	}
+	
+}
+
+@import "header";
+@import "../javascripts/vendor/flexslider/flexslider";
+
+#nextGen{
+	#sidebar-ad{
+		position:absolute;
+		bottom:20px;
+		left:10px;
+		height:250px;
+	}
+}
+
+.single-format-gallery #sidebar{
+	padding-top:0!important;
+	margin-top:0px!important;
+	.ad{
+		display:none;
+	}
+	#hot-right-now{
+		margin-top:-1px;
+	}
+}
+
+
+/** initial setup **/
+.nano {
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+  overflow : hidden;
+}
+.nano .content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top           : 0;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+}
+.nano .content:focus {
+  outline: thin dotted;
+}
+.nano .content::-webkit-scrollbar {
+  visibility: hidden;
+}
+.has-scrollbar .content::-webkit-scrollbar {
+  visibility: visible;
+}
+.nano > .pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 10px;
+  right      : 0;
+  top        : 0;
+  bottom     : 0;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01; 
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+  -moz-border-radius    : 5px;
+  -webkit-border-radius : 5px;  
+  border-radius         : 5px;
+}
+.nano > .pane > .slider {
+  background: #444;
+  background: rgba(0,0,0,.5);
+  position              : relative;
+  margin                : 0 1px;
+  -moz-border-radius    : 3px;
+  -webkit-border-radius : 3px;  
+  border-radius         : 3px;
+}
+.nano:hover > .pane, .pane.active, .pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}

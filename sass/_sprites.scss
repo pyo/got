@@ -1,0 +1,69 @@
+.facebook_icon, .fire_icon, .pinterest_icon, .google_icon, .rss_icon, .search_icon, .twitter_icon{
+	background: url('../img/sprites.optimized.png') no-repeat;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+}
+
+.facebook_icon{
+	background-position: -187px -60px ;
+	width: 28px;
+	height: 29px;
+}
+
+.fire_icon{
+	background-position: -217px -53px ;
+	width: 19px;
+	height: 26px;
+	margin-top:-5px;
+}
+
+.pinterest_icon{
+	background-position: -187px -90px ;
+	width: 28px;
+	height: 29px;
+}
+
+.google_icon{
+	background-position: -187px -29px ;
+	width: 28px;
+	height: 30px;
+}
+
+.rss_icon{
+	background-position: -187px 0;
+	width: 29px;
+	height: 28px;
+}
+
+.search_icon{
+	background-position: -217px -30px ;
+	width: 23px;
+	height: 22px;
+}
+
+.bg_h1_GoT{
+	background:transparent url('../img/got_logo.png') no-repeat left top;
+	width: 196px;
+	height: 141px;
+	display:block;
+	margin:31px 0 13px;
+}
+
+.twitter_icon{
+	background-position: -217px 0;
+	width: 28px;
+	height: 29px;
+}
+
+.like_icon{
+	width:26px;
+	height:22px;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin:-4px 1px 0 0;
+	vertical-align:middle;
+	background:transparent url('../img/icons/thumbs_up_icon.png') no-repeat left top;
+}
