@@ -54,6 +54,8 @@
 
 				</div>
 			</div>
+			
+			<div class="fb-like" data-href="<?php echo $link; ?>" data-width="660" data-show-faces="true" data-send="false"></div>
 
 			<?php if ( empty($post_type) ): ?>
 
@@ -75,7 +77,7 @@
 
 					<?php else: ?>
 
-						<img id="featuredImage" src="<?php echo tim_thumb_image(remove_http($post->featured_image), 660, null, 70); ?>">
+						<img id="featuredImage" src="<?php echo tim_thumb_image(remove_http($post->featured_image), 660, null, 100); ?>">
 
 					<?php endif; ?>	
 		
@@ -125,6 +127,8 @@
 					
 					}
 				}
+				
+				echo '<div class="fb-like" data-href="' . $link . '" data-width="480" data-layout="button_count" data-show-faces="true" data-send="false"></div>';
 				
 				edit_post_link( 'Edit Post', '<div class="edit-button">', '</div>');
 
