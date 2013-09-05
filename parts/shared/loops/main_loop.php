@@ -17,7 +17,7 @@
 				<article data-post-id="<?php echo $post->ID; ?>" data-permalink="<?php echo $link; ?>" class="post-box">
 					<div class="top">
 						<div class="imgwrap">
-							<?php echo return_make_pinned_tag(); ?>
+							<?php // echo return_make_pinned_tag(); ?>
 							<a class="thumb-wrapper" href="<?php echo esc_url( $link ); ?>"><?php if($format == 'video-format') echo '<img class="thumbnail-play-button" src="' . get_template_directory_uri() . '/img/icons/thumbnail_play_button.png">'; ?><img data-original="<?php echo tim_thumb_image(remove_http($featured_image), 202, 140, 75); ?>" class="lazy" height="140" width="202" src="<?php echo get_template_directory_uri(). '/img/grey.gif'; ?>"></a>
 						</div>
 						<div class="details">
