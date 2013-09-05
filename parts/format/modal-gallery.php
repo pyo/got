@@ -57,3 +57,4 @@ if ( !empty($images) && $images ) {
 	echo '</ul>';
 }
 
+?>

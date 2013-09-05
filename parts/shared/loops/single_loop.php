@@ -16,7 +16,7 @@
 				//	otherwise if it is explicitly only accept the set featured image
 				//
 				if ($post_type[0]->slug == 'modal-gallery-format') {
-					$post->featured_image = wp_get_attachment_image_src(getx_post_thumbnail_id($post->ID), 'full');
+					$post->featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 					if ($post->featured_image)
 						$post->featured_image = $post->featured_image[0];
 				} else {
@@ -94,7 +94,7 @@
 		<div class="six columns">
 			<?php get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
 		</div>
-		<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left" style="padding-left:15px">
+		<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left" style="padding-left:15px;">
 			<?php 
 				if ( empty( $post_type ) || $post_type[0]->slug == 'standard-format' ) {
 					//
