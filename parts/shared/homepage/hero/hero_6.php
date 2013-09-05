@@ -5,7 +5,7 @@
 	<?php endif; ?>
 	<a class="blue-overlay" href="<?php echo get_permalink($ids[$i]['hero_id'][0]); ?>?utm_ref=hero">
 		<span class="details">
-			<span class="title"><?php echo get_the_title($ids[$i]['hero_id'][0]); ?></span>
+			<h2 class="title"><?php echo get_the_title($ids[$i]['hero_id'][0]); ?></h2>
 		</span>
 		<img src="<?php echo tim_thumb_image(remove_http($ids[$i]['featured_image']), 320, 155, 75); ?>">
 	</a></li>
