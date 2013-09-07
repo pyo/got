@@ -22,12 +22,14 @@ a.blue-overlay{
 		font-size:11px;
 		text-transform:uppercase;
 	}
-	h2.title{
+	h2.title,span.title{
 	  color: #fff;
 		font-weight:700;
 		font-size:14px;
 		display:block;
 		line-height:18px;
+		margin:0;
+		padding:0;
 	}
 }
 
@@ -76,6 +78,8 @@ body.single a.blue-overlay{
 			font-weight:700;
 			font-size:24px;
 			line-height:28px;
+  		margin:0;
+  		padding:0;
 		}
 		
 	}
@@ -111,6 +115,8 @@ ul.hero_layout_1{
 			font-weight: 800;
 			font-size: 45px;
 			line-height: 1em;
+  		margin:0;
+  		padding:0;
 		}
 	}
 }
