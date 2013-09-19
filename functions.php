@@ -198,7 +198,7 @@
 	 * var $page string|array post type to add meta box to
 	 * var $js bool including javascript or not
 	 */
-	$list_field_meta_box = new custom_add_meta_box( 'list_field', 'List', $fields, array('post','page'), true );	
+	$list_field_meta_box = new custom_add_meta_box( 'list_field', 'List', $fields, array('post','page'), true, null );	
 
 	$fields = array(
 		array( // Select box
@@ -255,7 +255,7 @@
 	 * var $page string|array post type to add meta box to
 	 * var $js bool including javascript or not
 	 */
-	$video_meta_box = new custom_add_meta_box( 'video_field', 'Video', $fields, array('post','page'), true );	
+	$video_meta_box = new custom_add_meta_box( 'video_field', 'Video', $fields, array('post','page'), true, null );	
 
 	$fields = array(
 		array( // Text Input
@@ -304,66 +304,6 @@
 		),
 	);
 
-	// include_once('/advanced-custom-fields/advanced-custom-fields/acf.php');
-
-	// // //define( 'ACF_LITE', true );
-
-	// add_action('acf/register_fields', function(){
-	// 	include_once('add-ons/acf-tax/taxonomy-field.php' );
-	// });
-
-	// register_field_group(array (
-	// 	'id' => 'acf_pinned-tag',
-	// 	'title' => 'Pinned Tag',
-	// 	'fields' => array (
-	// 		array (
-	// 			'taxonomy' => 'post_tag',
-	// 			'field_type' => 'select',
-	// 			'allow_null' => 0,
-	// 			'load_save_terms' => 1,
-	// 			'multiple' => 0,
-	// 			'return_format' => 'id',
-	// 			'key' => 'field_51af835d1ee94',
-	// 			'label' => 'Pinned Tag',
-	// 			'name' => 'pinned_tag',
-	// 			'type' => 'taxonomy',
-	// 		),
-	// 	),
-	// 	'location' => array (
-	// 		array (
-	// 			array (
-	// 				'param' => 'post_type',
-	// 				'operator' => '==',
-	// 				'value' => 'post',
-	// 				'order_no' => 0,
-	// 				'group_no' => 0,
-	// 			),
-	// 		),
-	// 		array (
-	// 			array (
-	// 				'param' => 'post_type',
-	// 				'operator' => '==',
-	// 				'value' => 'page',
-	// 				'order_no' => 0,
-	// 				'group_no' => 1,
-	// 			),
-	// 			array (
-	// 				'param' => 'page',
-	// 				'operator' => '==',
-	// 				'value' => '23',
-	// 				'order_no' => 1,
-	// 				'group_no' => 1,
-	// 			),
-	// 		),
-	// 	),
-	// 	'options' => array (
-	// 		'position' => 'side',
-	// 		'layout' => 'default',
-	// 		'hide_on_screen' => array (
-	// 		),
-	// 	),
-	// 	'menu_order' => 0,
-	// ));
 
 	/**
 	 * Instantiate the class with all variables to create a meta box
@@ -373,7 +313,7 @@
 	 * var $page string|array post type to add meta box to
 	 * var $js bool including javascript or not
 	 */
-	$post_meta_box = new custom_add_meta_box( 'post_meta_box', 'Post Meta', $fields, array('post','page'), true );	
+	$post_meta_box = new custom_add_meta_box( 'post_meta_box', 'Post Meta', $fields, array('post','page'), true, null );	
 
 	$fields = array(
 		array( // Text Input
@@ -392,7 +332,7 @@
 	 * var $page string|array post type to add meta box to
 	 * var $js bool including javascript or not
 	 */
-	$modal_gallery_box = new custom_add_meta_box( 'modal_gallery_field', 'Modal Gallery', $fields, array('post','page'), true );	
+	$modal_gallery_box = new custom_add_meta_box( 'modal_gallery_field', 'Modal Gallery', $fields, array('post','page'), true, null );	
 
 	//
 	//	home
