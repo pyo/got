@@ -23,7 +23,7 @@
 		//
 		// recache transient
 		//
-		set_transient( 'featured_articles_section', $query, 60*60*1 );
+		set_transient( 'featured_articles_section', $query, 60*60*2 );
 	} 
 	
 	$i = 1;

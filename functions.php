@@ -1048,7 +1048,7 @@
 
 		if ( $img ) {
 			//return get_site_url() . '/media/resizer/' . $w . 'x' . $h . '/r/' . $img . '/c/' . $zc;
-			return get_template_directory_uri() . '/external/thumb/thumb.php?w=' . $w . $h . '&src=http://' . $img . '&q=100&a=' . $a . '&zc=' . $zc;
+			return get_template_directory_uri() . '/external/thumb/thumb.php?w=' . $w . $h . '&src=http://cdn.' . $img . '&q=100&a=' . $a . '&zc=' . $zc;
 		}
 
 	}

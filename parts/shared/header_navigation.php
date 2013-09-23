@@ -69,7 +69,7 @@ if ( false === ( $header_menu_results = get_transient( 'header_menu_results' ) )
 	    wp_reset_postdata();
 	
 	}
-  	set_transient( 'header_menu_results', $header_menu_results, 60*60*1 );
+  	set_transient( 'header_menu_results', $header_menu_results, 60*60*2 );
 }
 
 
