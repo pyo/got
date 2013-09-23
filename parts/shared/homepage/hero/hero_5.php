@@ -1,4 +1,4 @@
-<?php for ($i=1; $i <= count($ids) ; $i++) :?>
+<?php for ($i=1; $i <= count($ids); $i++) :?>
 	<?php if( $i == 1 ) : ?>
 		<li class="third featured">
 		<?php if(array_key_exists('term', $ids[$i])): ?>

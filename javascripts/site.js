@@ -400,9 +400,9 @@ function socialWorth(templateDir, articles) {
 
 
 jQuery(document).ready(function($) {
-	var headerHeight = $('header h1.bg_h1_GoT').offset().top + $('header h1.bg_h1_GoT').outerHeight(true),
+	var headerHeight = $('header div.bg_h1_GoT').offset().top + $('header div.bg_h1_GoT').outerHeight(true),
 		wst,
-		navH1 = $('nav h1.got'),
+		navH1 = $('nav div.got'),
 		navleft = $('nav ul.no-list.alignleft').first();
 
 	init();

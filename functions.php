@@ -42,7 +42,7 @@
 
 	add_action( 'wp_enqueue_scripts', 'script_enqueuer' );
 
-	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
+	//add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
 	/* ========================================================================================================================
 	
@@ -126,7 +126,7 @@
 
 		wp_register_script( 'got_video', get_template_directory_uri() . '/javascripts/got_video.js', array( 'jquery','site' ), '1.0', true );
 
-		wp_register_script( 'site', get_template_directory_uri() . '/javascripts/site.js', array( 'jquery', 'fitvids', 'mustache','socialite','lazyload', 'jquery_cookie' ), '1.0', true );
+		wp_register_script( 'site', get_template_directory_uri() . '/javascripts/site.js', array( 'jquery', 'fitvids', 'mustache','socialite','lazyload', 'jquery_cookie' ), '1.1', true );
 		wp_enqueue_script( 'site' );
 
 		/************

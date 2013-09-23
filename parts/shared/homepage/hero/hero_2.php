@@ -1,4 +1,4 @@
-<?php for ($i=1; $i <= count($ids) ; $i++) :?>
+<?php for ($i=1; $i <= count($ids); $i++) :?>
 <li class="half <?php if($i == 2) echo 'nmr'; ?>">
 	<?php if(array_key_exists('term', $ids[$i])): ?>
 		<a class="banner pinned-article" href="<?php echo $ids[$i]['term']['url']; ?>"><?php echo $ids[$i]['term']['name']; ?></a>
