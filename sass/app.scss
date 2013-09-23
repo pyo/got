@@ -381,7 +381,9 @@ div.wp-caption.alignleft{
 	}
 	a{
 		font-weight:700;
-		display:block;
+		display:inline-block;
+		*display:inline;
+		*zoom:1;
 		line-height:18px;
 		margin:8px 0 10px;
 	}

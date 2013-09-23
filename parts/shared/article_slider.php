@@ -30,7 +30,7 @@ if ( false === ( $article_slider = get_transient( 'article_slider' ) ) ) {
 
 					?>
 				
-					<?php echo '<li><a href="' . get_permalink() . '?utm_ref=slider"><img src="' . tim_thumb_image(remove_http($featured_image), 116, 72) . '" /><span class="hide description">' . $title . '</span></a></li>'; ?>
+					<?php echo '<li><a title="Permalink to ' . $title . '" href="' . get_permalink() . '?utm_ref=slider"><img alt="' . $title . '" src="' . tim_thumb_image(remove_http($featured_image), 116, 72) . '" /><span class="hide description">' . $title . '</span></a></li>'; ?>
 				
 				<?php endwhile; ?>
 			</ul>
