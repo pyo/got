@@ -70,6 +70,22 @@
 		})();
 
 		</script>
+		
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+		
+		<script async src="//platform.vine.co/static/scripts/embed.js" charset="utf-8"></script>
+		
+<script>
+var _prum = [['id', '523bedc4abe53d5f2e000000'],
+             ['mark', 'firstbyte', (new Date()).getTime()]];
+(function() {
+    var s = document.getElementsByTagName('script')[0]
+      , p = document.createElement('script');
+    p.async = 'async';
+    p.src = '//rum-static.pingdom.net/prum.min.js';
+    s.parentNode.insertBefore(p, s);
+})();
+</script>
 
 		<?php wp_head(); ?>
 

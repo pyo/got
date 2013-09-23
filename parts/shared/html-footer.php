@@ -103,18 +103,6 @@
 	src="http://c.statcounter.com/8160324/0/02cf53c7/1/"
 	alt="tumblr hit tracking tool"></a></div></noscript>
 	<!-- End of StatCounter Code for Default Guide -->
-	<!-- Histats.com  START  (aync)-->
-	<script type="text/javascript">var _Hasync= _Hasync|| [];
-	_Hasync.push(['Histats.start', '1,2122825,4,0,0,0,00010000']);
-	_Hasync.push(['Histats.fasi', '1']);
-	_Hasync.push(['Histats.track_hits', '']);
-	(function() {
-	var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-	hs.src = ('http://s10.histats.com/js15_as.js');
-	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-	})();</script>
-	<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2122825&101" alt="free html hit counter" border="0"></a></noscript>
-	<!-- Histats.com  END  -->
 	<!-- Begin Comscore Tag -->
 	<script>
 	  var _comscore = _comscore || [];

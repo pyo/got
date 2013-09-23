@@ -75,7 +75,7 @@ $salmon:#d7433f;
  */
 body{
 	background:#fcfcfc;
-	margin-top:50px;
+	padding-top:50px;
 	font-family:$proxima-nova;
 	font-weight:400;
 } 
@@ -117,6 +117,15 @@ padding-left:15px;
 	blockquote, img, p{
 		margin-bottom:1.4em;
 	}
+}
+
+#primary {
+  blockquote {
+  border-left:3px solid $salmon;
+    p {
+    color: #555;
+    }
+  }
 }
 
 #primary .post-box .details a.post-edit-link {
@@ -225,6 +234,9 @@ display:none;
 	box-sizing:content-box;
 	-moz-box-sizing:content-box;
 	vertical-align:baseline;
+	  div{
+	    height:90px;
+	}
 }
 
 #skyscrapper-wrapper{
@@ -237,6 +249,9 @@ display:none;
 	box-sizing:content-box;
 	-moz-box-sizing:content-box;
 	vertical-align:baseline;
+	  div{
+	    height:600px;
+	  }
 }
 
 span.latest_icon{
@@ -308,6 +323,9 @@ div.wp-caption.alignleft{
 	box-sizing:content-box;
 	vertical-align:baseline;
 	-moz-box-sizing:content-box;
+	  div{
+	    height:250px;
+	  }
 }
 
 

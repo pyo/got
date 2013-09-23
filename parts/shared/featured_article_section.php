@@ -8,7 +8,7 @@
 			'posts_per_page' 	=> 10,
 			'post_type' 		=> 'post',
 			'meta_key' 			=> 'got_featured_select',
-			'order' 			=> 'ASC',
+			'order' 			=> 'DESC',
 			'meta_query' 		=> array(
 				array(
 					'key' 		=> 'got_featured_select',
