@@ -32,7 +32,7 @@
 									</div>
 									<div class="details">
 										<?php echo get_time_since_posted(get_the_time('U', $post->ID)); ?>
-										<a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
+										<h1><a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 										<?php //the_excerpt(); ?>
 									</div>
 								</div>

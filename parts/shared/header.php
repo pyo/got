@@ -8,7 +8,7 @@
 	</div>
 	<div class="row">
 		<div class="six columns">
-			<h1 class="hide-text bg_h1_GoT"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="hide-text bg_h1_GoT"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></div>
 		</div>
 		<div class="eighteen columns">
 			<div class="row">
@@ -26,7 +26,7 @@
 	<nav>
 		<div class="row">
 			<div class="twentyfour columns cf">
-				<h1 class="got hide-text alignleft "><a href="<?php echo home_url('/'); ?>">GossipOnThis.com</a></h1>
+				<div class="got hide-text alignleft "><a href="<?php echo home_url('/'); ?>">GossipOnThis.com</a></div>
 
 				<?php get_template_part('/parts/shared/header_navigation'); ?>
 	

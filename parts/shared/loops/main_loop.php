@@ -18,12 +18,12 @@
 					<div class="top">
 						<div class="imgwrap">
 							<?php // echo return_make_pinned_tag(); ?>
-							<a class="thumb-wrapper" href="<?php echo esc_url( $link ); ?>"><?php if($format == 'video-format') echo '<img class="thumbnail-play-button" src="' . get_template_directory_uri() . '/img/icons/thumbnail_play_button.png">'; ?><img data-original="<?php echo tim_thumb_image(remove_http($featured_image), 202, 140, 75); ?>" class="lazy" height="140" width="202" src="<?php echo get_template_directory_uri(). '/img/grey.gif'; ?>"></a>
+							<a class="thumb-wrapper" href="<?php echo esc_url( $link ); ?>"><?php if($format == 'video-format') echo '<img class="thumbnail-play-button" src="' . get_template_directory_uri() . '/img/icons/thumbnail_play_button.png">'; ?><img data-original="<?php echo tim_thumb_image(remove_http($featured_image), 202, 140, 75); ?>" class="lazy" alt="<?php the_title(); ?>" height="140" width="202" src="<?php echo get_template_directory_uri(). '/img/grey.gif'; ?>"></a>
 						</div>
 						<div class="details">
 							<?php echo get_time_since_posted(get_the_time('U', $post->ID)); ?><?php if(current_user_can('edit_post')): ?><?php edit_post_link( 'Edit', ' (', ') '); ?> <?php if (function_exists('wpp_get_views')) echo '| Views: ' . number_format( wpp_get_views( get_the_ID() ) ); ?><?php endif; ?>
 
-							<a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
+							<h1 class="post-title-headline"><a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 							<?php //the_excerpt(); ?>
 						</div>
 					</div>
