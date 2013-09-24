@@ -55,7 +55,7 @@ function bindNavigation(){
 			$firstPostlist.show();
 			$this.find('[data-toggle-postlist]').first().addClass('active');
 
-			
+			$('img.lazy').trigger('navOpen');
 			
 			// $this.find('div.dropdown').one('mouseleave', function(){
 			// 	$this.removeClass('active');
@@ -198,7 +198,6 @@ function nexGenInit(gallery) {
 				//	set history to first image
 				//
 				
-				//history.pushState({}, '', location + '?got-gallery-image=1');
 				counterCurrent.text('');
 				counterCurrent.text(parseInt(slider.currentSlide) + 1);	
 				
@@ -224,17 +223,7 @@ function nexGenInit(gallery) {
 			$('[data-total-slides]').text(slider.count);
 
 		},           
-		before: function(slider){
-			// var theSlide = parseInt(slider.animatingTo);
-			// theSlide = theSlide++;
-
-			// var location = window.location.origin + '' + window.location.pathname;
-
-			// counterCurrent.text(theSlide);
-
-			// history.pushState({}, '', location + '?got-gallery-image=' + theSlide);
-			
-		},           
+		before: function(slider){},           
 		after: function(slider){
 			var slideInfo = $('.flex-active-slide div.hide');
 			var text = $('.flex-active-slide div.hide [data-slide-caption]').text();
@@ -246,8 +235,6 @@ function nexGenInit(gallery) {
 
 			titleTarget.text(slideInfo.find('[data-slide-title]').text());
 
-			//history.pushState({}, '', location + '?got-gallery-image=' + currentSlide);
-			
 			if (text.length > 1) {
 
 				captionTarget.show();
@@ -385,17 +372,7 @@ function socialWorth(templateDir, articles) {
 		});
 
 	});
-	// $.getJSON('./socialworth.php', { url: url }, function(data) {
-	// 	// $("h1").html(data.count + " &hearts;");
-
-	// 	// $.each(data.services, function(service, count) {
-	// 	// 	var row = $("<tr />");
-	// 	// 	row.append($("<td />").html(service));
-	// 	// 	row.append($("<td />").html(count));
-
-	// 	// 	$("table").append(row);
-	// 	// });
-	// });
+	
 }
 
 
@@ -423,16 +400,10 @@ jQuery(document).ready(function($) {
 	$('div.social_media_dropdown').on({
 		mouseenter:function(e){
 			var dropdown = $('#single-social-dropdown');
-			
-			//Socialite.load($('[data-social-media-dropdown] .social-buttons'));
 
 			if( dropdown.css('display') === 'none' ) {
 				dropdown.css('display','block');
 				
-				// dropdown.one('mouseleave', function(){
-				// 	dropdown.css('display','none');
-				// });
-
 			}
 		},
 		mouseleave: function(e) {
@@ -445,33 +416,11 @@ jQuery(document).ready(function($) {
 
 	initMostPopularPost(most_popular);
 
-	$('img.lazy').show().lazyload();
-
-	$('article[data-permalink]').each(function(){
-		var $this = $(this);
-		var $thisPermalink = $this.attr('data-permalink');
-
-		// $.ajax({
-		// 	url: 'http://rest.sharethis.com/reach/getUrlInfo.php?url=' + $thisPermalink + '&pub_key=c610b095-49cf-42d9-a8ab-2821cffd6859&access_key=ceaeaded8d5b0a5ea639c5226f84ed25',
-		// 	type: 'GET',
-		// 	dataType: 'jsonp',
-		// 	success: function(data, res){
-		// 		console.log(data);
-		// 		console.log(res);
-		// 		// if(data.count >= 1) {
-		// 		// 	$this.find('[data-share-count]').html('<strong>' + data.count + '</strong> shares');
-		// 		// }
-		// 	}
-		// });
-
-
-		// $.getJSON('http://rest.sharethis.com/reach/getUrlInfo.php?url=' + $thisPermalink + '&pub_key=c610b095-49cf-42d9-a8ab-2821cffd6859&access_key=ceaeaded8d5b0a5ea639c5226f84ed25', function(data){
-		// 	console.log(data);
-		// });
-
+	$('#primary img.lazy').show().lazyload();
+	$('nav img.lazy').lazyload({
+		event: 'navOpen'
 	});
 
-	
 
 
 });
