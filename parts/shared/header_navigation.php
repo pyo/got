@@ -92,7 +92,7 @@ if ( false === ( $header_menu_results = get_transient( 'header_menu_results' ) )
 							<?php $postlist .= '<ul data-postlist="' . str_replace(' ', '-', str_replace('&', 'and', htmlspecialchars_decode($sub))) . '" class="no-list menu-post-list">'; ?>
 							
 								<?php foreach($header_menu_results[$key]['children'][$sub]['posts'] as $post): ?>
-									<?php $postlist .= '<li><a href="' . $post[2] . '"><img height="59" width="59" src="' . get_template_directory_uri() . '/img/grey.gif" data-original="' . tim_thumb_image(remove_http($post[3]), 59, 59, 100, 1) . '" alt="' . $post[1] . '"><span>' . $post[1] . '</span></a></li>'; ?>
+									<?php $postlist .= '<li><a href="' . $post[2] . '"><img height="59" width="59" class="lazy" src="' . get_template_directory_uri() . '/img/grey.gif" data-original="' . tim_thumb_image(remove_http($post[3]), 59, 59, 100, 1) . '" alt="' . $post[1] . '"><span>' . $post[1] . '</span></a></li>'; ?>
 								<?php endforeach; ?>
 
 								<?php if( $term_link ): ?>									
