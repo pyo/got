@@ -130,8 +130,8 @@
 		// wp_register_script( 'site', get_template_directory_uri() . '/javascripts/site.js', array( 'jquery', 'fitvids', 'mustache','socialite','lazyload', 'jquery_cookie' ), '1.1', true );
 		// wp_enqueue_script( 'site' );
 
-		wp_register_script( 'ugly', get_template_directory_uri() . '/javascripts/script.uglify.js', null, '1.0', true );
-		wp_enqueue_script( 'ugly' );
+		wp_register_script( 'jquery', get_template_directory_uri() . '/javascripts/script.uglify.js', null, '1.0', true );
+		wp_enqueue_script( 'jquery' );
 
 		/************
 		 * Styles
