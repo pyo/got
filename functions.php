@@ -982,38 +982,39 @@
 	 */
 	function get_time_since_posted($time = null) {
 		if ( $time ) {
+			
 			$time_since = human_time_diff( $time, current_time( 'timestamp' ) );
 			
+			$number = explode(' ', $time_since);
+			$days = intval($number[0]);
+			
 			if ($time_since == '1 day') {
+				//
+				//	it was added yesterday
+				//
 				return 'Added yesterday';
+			
+			} elseif($days >= 7 && $number[1] == 'days') {
+				//
+				//	it was added over a week ago 
+				//
+				$date = date('M jS Y', $time);
+				return 'Added ' . $date; 
+
 			} else {
+				//
+				//	it was added sometime between just now and 6 days ago but not yesterday
+				//	
 				$time_since_posted =  $time_since . ' ago';
 				return 'Added ' . $time_since_posted;
-			}			
+			
+			}	
+
 		}
 
 	}
 
 	function tim_thumb_image($img, $w, $h = null, $q = null, $zc = null, $a = null){
-		// $tim = '';
-		// $q = ( $q == null ) ? '&q=76' : '&q=' . $q;
-		// $zc = ( $zc == null ) ? '1' : $zc;
-
-		// if( $img ) {
-		// 	$tim .= get_template_directory_uri() . '/external/timthumb.php?';
-		// 	$tim .= $q . '&src=' . $img . '&a=c&zc=' . $zc;	
-
-		// 	if ( $w )
-		// 		$tim .= '&w=' . $w;
-		// 	if ( $h ) 
-		// 		$tim .= '&h=' . $h;
-			
-		// 	return $tim;	 
-		// } else {
-		// 	return false;
-		// }
-
-		///resizer/250x150/r/your-image-url.jpg
 
 		if(is_null($zc)){
 			$zc = '1';
