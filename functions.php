@@ -143,7 +143,7 @@
 		 * Styles
 		 *************
 		 */
-		wp_register_style( 'screen', get_stylesheet_directory_uri() . '/stylesheets/app.css', '', null, 'screen' );
+		wp_register_style( 'screen', get_stylesheet_directory_uri() . '/stylesheets/app.css', '', '1.1', 'screen' );
         wp_enqueue_style( 'screen' );
 	}	
 
