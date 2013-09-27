@@ -278,17 +278,13 @@
 			'label'	=> 'Featured?', // <label>
 			'desc'	=> '', // description
 			'id'	=> $prefix . 'featured_select', // field id and name
-			'type'	=> 'select', // type of field
+			'type'	=> 'checkbox_group', // type of field
 			'options' => array ( // array of options
-				'one' => array ( // array key needs to be the same as the option value
-					'label' => 'Not Featured', // text displayed as the option
-					'value'	=> 'not_featured' // value stored for the option
-				),
-				'two' => array (
+				'one' => array (
 					'label' => 'Featured',
 					'value'	=> 'featured'
 				),
-				'three' => array (
+				'two' => array (
 					'label' => 'Super Feature',
 					'value'	=> 'super_feature'
 				)
@@ -1032,7 +1028,7 @@
 
 		if ( $img ) {
 			//return get_site_url() . '/media/resizer/' . $w . 'x' . $h . '/r/' . $img . '/c/' . $zc;
-			return get_template_directory_uri() . '/external/thumb/thumb.php?w=' . $w . $h . '&src=http://cdn.' . $img . '&q=100&a=' . $a . '&zc=' . $zc;
+			return get_template_directory_uri() . '/external/thumb/thumb.php?w=' . $w . $h . '&src=http://' . $img . '&q=100&a=' . $a . '&zc=' . $zc;
 		}
 
 	}
