@@ -15,7 +15,7 @@
 
 			?>
 			<?php if(!empty($feature) && in_array('super_feature', $feature[0])): ?>
-			<?php // super featured template // ?>
+				<?php // super featured template // ?>
 				<li>
 					<article data-post-id="<?php echo $post->ID; ?>" data-permalink="<?php echo $link; ?>" class="post-box super-feature">
 						<div>
@@ -23,7 +23,6 @@
 							<div class="details">
 								<?php echo get_time_since_posted(get_the_time('U', $post->ID)); ?><?php if(current_user_can('edit_post')): ?><?php edit_post_link( 'Edit', ' (', ') '); ?> <?php if (function_exists('wpp_get_views')) echo '| Views: ' . number_format( wpp_get_views( get_the_ID() ) ); ?><?php endif; ?>
 								<h1 class="post-title-headline"><a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-								<?php the_content('more'); ?>
 							</div>
 						</div>
 						<div class="social">
@@ -32,7 +31,7 @@
 					</article>
 				</li>
 			<?php else : ?>
-			<?php // regular post template // ?>
+				<?php // regular post template // ?>
 				<li>
 					<article data-post-id="<?php echo $post->ID; ?>" data-permalink="<?php echo $link; ?>" class="post-box">
 						<div class="top">
