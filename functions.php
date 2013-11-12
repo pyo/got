@@ -1114,7 +1114,7 @@
 			if($count > 1) $template .= 's';
 			$template .= '</strong></span>';
 		} elseif (!is_single($post->ID) && !is_page($post->ID) && $count == 0) {
-			$template .= '<span data-share-count class="open-share"><strong>Be the first to share!</strong></span>';
+			$template .= '<span data-share-count class="open-share"><strong>Share this!</strong></span>';
 		} elseif (!is_single($post->ID) && !is_page($post->ID) && $count == 0) {
 			$template .= '<span data-share-count class="open-share"><strong>Share!</strong></span>';
 		} 

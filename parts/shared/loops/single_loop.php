@@ -34,7 +34,7 @@
 					<div class="alignright">
 						<ul class="inline-block">
 							<li><?php edit_post_link( 'Edit Post', '<div class="edit-button">', '</div>'); ?></li>
-							<li><?php if (function_exists('wpp_get_views')) echo '| Post Views: ' . number_format( wpp_get_views( get_the_ID() ) ); ?></li>
+							<li><?php if (function_exists('wpp_get_views')) echo '&nbsp;| Views:&nbsp;' . number_format( wpp_get_views( get_the_ID() ) ); ?></li>
 						</ul>
 					</div>
 				
