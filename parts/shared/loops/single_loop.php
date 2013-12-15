@@ -55,7 +55,7 @@
 				</div>
 			</div>
 			
-			<div class="fb-like" data-href="<?php echo $link; ?>" data-width="660" data-show-faces="true" data-send="false"></div>
+			<div class="fb-like" data-href="<?php echo $link; ?>" data-width="660" data-show-faces="false" data-send="false"></div>
 
 			<?php if ( empty($post_type) ): ?>
 
@@ -101,6 +101,8 @@
 					//	The GoT Format is "standard" or a format was not selected
 					//
 					the_content();
+					
+					custom_wp_link_pages();
 				
 				} else {
 					//
@@ -128,7 +130,7 @@
 					}
 				}
 				
-				echo '<div class="fb-like" data-href="' . $link . '" data-width="480" data-layout="button_count" data-show-faces="true" data-send="false"></div>';
+				echo '<div class="fb-like" data-href="' . $link . '" data-width="480" data-layout="button_count" data-show-faces="false" data-send="false"></div>';
 				
 				edit_post_link( 'Edit Post', '<div class="edit-button">', '</div>');
 

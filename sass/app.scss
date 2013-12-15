@@ -125,7 +125,7 @@ padding-left:15px;
   blockquote {
   border-left:3px solid $salmon;
     p {
-    color: #555;
+    color: #444;
     }
   }
 }
@@ -229,6 +229,11 @@ a img.alignnone {
 
 dd.gallery-caption{
 display:none;
+}
+
+p#post-pagination {
+	font-size: 30px;
+	font-weight: bold;
 }
 
 //
