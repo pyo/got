@@ -988,21 +988,21 @@
 				//
 				//	it was added yesterday
 				//
-				return 'Posted Yesterday';
+				return 'yesterday';
 			
-			} elseif($days >= 7 && $number[1] == 'Days') {
+			} elseif($days >= 7 && $number[1] == 'days') {
 				//
 				//	it was added over a week ago 
 				//
 				$date = date('M jS Y', $time);
-				return 'Posted ' . $date; 
+				return $date; 
 
 			} else {
 				//
 				//	it was added sometime between just now and 6 days ago but not yesterday
 				//	
-				$time_since_posted =  $time_since . ' Ago';
-				return 'Posted ' . $time_since_posted;
+				$time_since_posted =  $time_since . ' ago';
+				return $time_since_posted;
 			
 			}	
 
