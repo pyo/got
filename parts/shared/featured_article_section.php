@@ -15,7 +15,7 @@
 					'value' 	=> 'featured',
 					'compare' 	=> 'IN',
 				)
-			),
+			)
 		);
 		// The Query
 		$query = new WP_Query( $args );
