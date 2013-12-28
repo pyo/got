@@ -77,7 +77,6 @@ $salmon:#d7433f;
  */
 body{
 	background:#fcfcfc;
-	padding-top:50px;
 	font-family:$proxima-nova;
 	font-weight:400;
 } 
@@ -125,7 +124,7 @@ padding-left:15px;
   blockquote {
   border-left:3px solid $salmon;
     p {
-    color: #444;
+    color: #333;
     }
   }
 }

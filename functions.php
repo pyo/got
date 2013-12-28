@@ -99,10 +99,10 @@
 		if(!is_admin()){
 
 			wp_deregister_script( 'jquery' );
-
-			wp_register_script( 'jquery', get_template_directory_uri() . '/javascripts/script.uglify.js', null, '1.1', true );
+			wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', NULL, '1.9.1', false );
 			wp_enqueue_script( 'jquery' );
-		
+			wp_enqueue_script('site', get_template_directory_uri() . '/javascripts/site.uglify.min.js', null, '1', true);
+
 		}
 		// wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', NULL, '1.9.1', false );
 		// wp_enqueue_script( 'jquery' );
@@ -988,21 +988,21 @@
 				//
 				//	it was added yesterday
 				//
-				return 'yesterday';
+				return 'Posted yesterday';
 			
 			} elseif($days >= 7 && $number[1] == 'days') {
 				//
 				//	it was added over a week ago 
 				//
 				$date = date('M jS Y', $time);
-				return $date; 
+				return 'Posted ' . $date; 
 
 			} else {
 				//
 				//	it was added sometime between just now and 6 days ago but not yesterday
 				//	
 				$time_since_posted =  $time_since . ' ago';
-				return $time_since_posted;
+				return 'Posted ' . $time_since_posted;
 			
 			}	
 
@@ -1205,22 +1205,29 @@
 	function get_first_image($post_id = null, $post_content = null){
 		global $post;
 
+		if (is_null($post_id)) {
+			if(!isset($post))
+				return;
+		}
+
+
+
 		$first_img = '';
 
-		$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+		$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
 
 		if ($featured_image) {
 		 	return $featured_image[0];
 		
 		} else {
 
-			if($post->post_content)
-				$post_content = $post->post_content;
+			// if($post->post_content)
+			// 	$post_content = $post->post_content;
 
-			if(is_null($post_content) && !$post->post_content){
+			//if(is_null($post_content) && !$post->post_content){
 				$post_obj = get_post($post_id);
 				$post_content = $post_obj->post_content;
-			}
+			//}
 
 			if ($post_content) {
 				ob_start();
@@ -1257,89 +1264,52 @@
 
 		$tax = 'vertical';
 
-		// $celebs = get_term_children(7652, $tax);
-		// $celebs[] = 7652;
+		$page_id = 181890;
+		$part = 'home';
 
-		// $news = get_term_children(7654, $tax);
-		// $news[] = 7654;
-
-		// if (is_tax($tax, 'celebs')) {
-		// 	$page_id = 181891;
-		// 	$part = 'celebs';
-
-		// } elseif(is_tax($tax, 'hip-hop')) {
-		// 	$page_id = 181896;
-		// 	$part = 'sports';
-
-		// } elseif (is_tax($tax, 'crime-news')) {
-		// 	$page_id = 181893;
-		// 	$part = 'crime-news';
-
-		// } elseif (is_tax($tax, 'sports')) {
-		// 	$page_id = 181898;
-		// 	$part = 'sports';
-
-		// } elseif (is_tax($tax, 'news')) {
-		// 	$page_id = 181897;
-		// 	$part = 'news';
-
-		// } elseif (is_tax($tax, 'TV')){
-		// 	$page_id = 181899;
-		// 	$part = 'TV';
-		// } else {
-			$page_id = 181890;
-			$part = 'home';
-
-		//}
 
 		//
 		// get the hero image layout
 		//
 		$num_hero 	= get_post_meta($page_id, 'got_hero_layout', true);
 
-		if ( false === ( $header_menu_results = get_transient( $part . '_header_menu_results' ) ) ) {
+		//if ( false === ( $header_menu_results = get_transient( $part . '_header_menu_results' ) ) ) {
 
-			$i 			= 1;
+		$i = 1;
+		$ids = array();
+		//
+		// loop through the posts and load up an array
+		//
+		while ( $i <= $num_hero ) {
+			//
+			// get the post ID
+			//
+			$ids[$i]['hero_id'] = get_post_meta($page_id, 'got_hero_layout_' . $i, true);
 			
 			//
-			// loop through the posts and load up an array
+			// get the term ID, nice name and slug if its available
 			//
-			while ( $i <= $num_hero ) {
-				//
-				// get the post ID
-				//
-				$ids[$i]['hero_id'] = get_post_meta($page_id, 'got_hero_layout_' . $i, true);
+			if ($term_id = get_post_meta($ids[$i]['hero_id'][0], 'pinned_tag', true)) {
+				$ids[$i]['term'] = get_term($term_id, 'post_tag', ARRAY_A);
 				
-				//
-				// get the term ID, nice name and slug if its available
-				//
-				if ($term_id = get_post_meta($ids[$i]['hero_id'][0], 'pinned_tag', true)) {
-					$ids[$i]['term'] = get_term($term_id, 'post_tag', ARRAY_A);
-					
-					if($ids[$i]['term']) 
-						$ids[$i]['term']['url'] = get_term_link($ids[$i]['term']['slug'], 'post_tag');
-				
-				}
-
-				//print_r($ids[$i]);
-
-				//
-				//	get the featured image or the first image if there is no featured image
-				//
-				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $ids[$i]['hero_id'][0] ), 'full');
-
-				if ( $image ) {
-					$ids[$i]['featured_image'] 	= $image[0];
-				} else {
-					$ids[$i]['featured_image'] 	= get_first_image($ids[$i]['hero_id'][0]);
-				}
-
-				$i++;
+				if($ids[$i]['term']) 
+					$ids[$i]['term']['url'] = get_term_link($ids[$i]['term']['slug'], 'post_tag');
+			
 			}
 
-			set_transient( $part . '_header_menu_results', $header_menu_results, 60*60*1 );
+			//
+			//	get the featured image or the first image if there is no featured image
+			//
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $ids[$i]['hero_id'][0] ), 'full');
 
-		}	
+			if ( $image ) {
+				$ids[$i]['featured_image'] 	= $image[0];
+			} else {
+				$ids[$i]['featured_image'] 	= get_first_image($ids[$i]['hero_id'][0]);
+			}
+
+			$i++;
+		}
 
 		echo '<section id="hero">';
 			echo '<div class="row">';
