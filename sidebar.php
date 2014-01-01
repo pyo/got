@@ -42,13 +42,3 @@
 		<script type="text/javascript" src="http://cdn.komoona.com/scripts/kmn_sa.js"></script>
 	</div>
 </div>
-<div align="center">
-  <!-- Site Meter -->
-  <script type="text/javascript" src="http://s50.sitemeter.com/js/counter.js?site=s50gossiponthis">
-  </script>
-  <noscript>
-  <a href="http://s50.sitemeter.com/stats.asp?site=s50gossiponthis" target="_top">
-  <img src="http://s50.sitemeter.com/meter.asp?site=s50gossiponthis" alt="Site Meter" border="0"/></a>
-  </noscript>
-  <!-- Copyright (c)2009 Site Meter -->
-</div>
