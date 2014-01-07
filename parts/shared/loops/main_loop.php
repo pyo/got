@@ -23,6 +23,7 @@
 							<div class="details">
 								<?php echo get_time_since_posted(get_the_time('U', $post->ID)); ?><?php if(current_user_can('edit_post')): ?><?php edit_post_link( 'Edit', ' (', ') '); ?> <?php if (function_exists('wpp_get_views')) echo '| Views: ' . number_format( wpp_get_views( get_the_ID() ) ); ?><?php endif; ?>
 								<h1 class="post-title-headline"><a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+								<?php // echo substr(strip_tags($post->post_content), 0, 200 );?>
 							</div>
 						</div>
 						<div class="social">
@@ -43,6 +44,7 @@
 								<?php echo get_time_since_posted(get_the_time('U', $post->ID)); ?><?php if(current_user_can('edit_post')): ?><?php edit_post_link( 'Edit', ' (', ') '); ?> <?php if (function_exists('wpp_get_views')) echo '| Views: ' . number_format( wpp_get_views( get_the_ID() ) ); ?><?php endif; ?>
 
 								<h1 class="post-title-headline"><a href="<?php echo esc_url( $link ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+								<?php // echo substr(strip_tags($post->post_content), 0, 200 );?>
 								<?php //the_excerpt(); ?>
 							</div>
 						</div>

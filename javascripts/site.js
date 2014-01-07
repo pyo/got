@@ -316,7 +316,7 @@ function init(){
 }
 
 function resizeYoutube() {
-	var $allVideos = $("#primary.eighteen.columns, div.fit-vid, [data-video-wrapper]");
+	var $allVideos = $("#primary, div.fit-vid");
 	$allVideos.fitVids({
 		customSelector: "iframe[src^='http://cdnapi.kaltura.com'], iframe[src^='http://v-vids.com'], iframe[src^='http://vodlocker.com'], iframe[src^='http://faststream.in'], iframe[src^='http://videomega.tv'], iframe[src^='http://media.mtvnservices.com']"
 	});

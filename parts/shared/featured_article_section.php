@@ -15,7 +15,7 @@
 					'value' 	=> 'featured',
 					'compare' 	=> 'IN',
 				)
-			)
+			),
 		);
 		// The Query
 		$query = new WP_Query( $args );
@@ -23,7 +23,7 @@
 		//
 		// recache transient
 		//
-		set_transient( 'featured_articles_section', $query, 60*60*2 );
+		set_transient( 'featured_articles_section', $query, 60*60*1 );
 	} 
 	
 	$i = 1;
@@ -35,11 +35,13 @@
 			echo '<ul class="no-list">';
 				while ( $query->have_posts() ) {
 					$query->the_post();
+					
 					if ($i == $count) { 
 						$class = ' class="last"'; 
 					} else { 
 						$class = ''; 
 					}
+
 					$term = wp_get_post_terms($post->ID, 'vertical');
 					
 					if($term) {

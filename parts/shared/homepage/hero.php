@@ -12,7 +12,7 @@
 	//if ( false === ( $header_menu_results = get_transient( 'header_menu_results' ) ) ) {
 
 	$i 			= 1;
-	$ids		= array();
+	
 	//
 	// loop through the posts and load up an array
 	//
@@ -49,6 +49,7 @@
 		$i++;
 
 	}
+
 	//set_transient( 'header_menu_results', $header_menu_results, 60*2*1 );
 
 ?>
