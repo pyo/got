@@ -1241,12 +1241,3 @@
 	// 	global $post;
 
 	// }
-
-	function get_site_short_title() {
-		global $post;
-
-		$title = get_post_meta($post->ID, 'short_title', true);
-		$title = empty($title) ? get_the_title() : $title;
-		
-		return $title;
-	}

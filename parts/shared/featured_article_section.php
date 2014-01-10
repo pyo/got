@@ -1,21 +1,14 @@
 <?php
 
-	if ( false === ( $query = get_transient( 'featured_articles_section' ) ) ) {
+	if ( false === ( $query = get_transient( 'sidebar_featured_posts' ) ) ) {
 		//
 		// It wasn't there, so regenerate the data and save the transient
 		//
 		$args = array(
 			'posts_per_page' 	=> 10,
 			'post_type' 		=> 'post',
-			'meta_key' 			=> 'got_featured_select',
-			'order' 			=> 'DESC',
-			'meta_query' 		=> array(
-				array(
-					'key' 		=> 'got_featured_select',
-					'value' 	=> 'featured',
-					'compare' 	=> 'IN',
-				)
-			),
+			'meta_key' 			=> 'got_sidebar_feature',
+			'order' 			=> 'DESC'
 		);
 		// The Query
 		$query = new WP_Query( $args );
@@ -23,9 +16,9 @@
 		//
 		// recache transient
 		//
-		set_transient( 'featured_articles_section', $query, 60*60*1 );
+		set_transient( 'sidebar_featured_posts', $query, HOUR_IN_SECONDS );
 	} 
-	
+
 	$i = 1;
 	$count = count($query->posts);
 
@@ -50,7 +43,7 @@
 
 					echo '<li' . $class . '>';
 					if ($term['term_link']) echo '<a class="term_link" href="' . $term['term_link'] . '">' . $term[0]->name . '</a>';
-					echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+					echo '<a href="' . get_permalink() . '">' . get_site_short_title() . '</a></li>';
 					$i++;
 				}
 			echo '</ul>';
