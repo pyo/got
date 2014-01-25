@@ -17,7 +17,7 @@
 				$featured_img = $featured_img[0];
 			} else {
 				$featured_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-				$featured_img = tim_thumb_image(remove_http($featured_img[0]), 660, 370, 100 );
+				$featured_img = tim_thumb_image(remove_http($featured_img[0]), 660, 371, 100 );
 			}
 		}
 
@@ -25,7 +25,7 @@
 
 		wp_enqueue_script( 'got_video' );
 
-		echo '<div data-video-wrapper><div data-video="vevo" data-video-width="" data-video-height="" class="video featured-video" style="position:relative;"><img src="' . get_template_directory_uri() . '/img/got_vid_logo.png" style="position:absolute;right:1.5em; bottom:2.5em;margin:0;"><a href="#" onclick="return false;" class="play_button"></a>';
+		echo '<div data-video-wrapper><div class="video featured-video" style="position:relative;"><img src="' . get_template_directory_uri() . '/img/got_vid_logo.png" style="position:absolute;right:1.5em; bottom:2.5em;margin:0;"><a href="#" onclick="return false;" class="play_button"></a>';
 		
 		if ($oneliner)
 			echo '<h4 style="position:absolute;background-color:rgba(27,137,165,0.8);font-weight:800;color:#fff;top:0;left:0;padding:10px;">' . $oneliner. '</h4>';
