@@ -5,8 +5,8 @@
 			<ul class="inline-block no-list">
 				<li>
 					<a class="menu-header" href="<?php echo home_url('/'); ?>">Front Page</a></li><li>
-					<a class="menu-header" href="<?php echo home_url('/?vertical=news'); ?>">News</a></li><li>
-					<a class="menu-header" href="<?php echo home_url('/?vertical=celebs'); ?>">Celebs</a></li><li>
+					<a class="menu-header" href="<?php echo home_url('/?vertical=the-news'); ?>">News</a></li><li>
+					<a class="menu-header" href="<?php echo home_url('/?vertical=celebrity'); ?>">Celebs</a></li><li>
 					<a class="menu-header" href="<?php echo home_url('/?vertical=entertainment'); ?>">Entertainment</a></li><li>
 					<a class="menu-header" href="<?php echo home_url('/?vertical=tv'); ?>">TV</a></li><li>	
 					<a class="menu-header" href="<?php echo home_url('/?vertical=hip-hop'); ?>">Hip-Hop</a></li><li>
@@ -30,12 +30,26 @@
 					<li>
 						<a class="menu-header" href="<?php echo home_url('/about'); ?>">About Us</a></li><li>
 						<a class="menu-header" href="<?php echo home_url('/contact'); ?>">Contact Us</a></li><li>
-						<a class="menu-header" href="<?php echo home_url('/privacy'); ?>">Privacy Policy</a></li><li>
-						<a class="menu-header" href="<?php echo home_url('/comment-moderation'); ?>">Comment Rules</a></li>
+						<a class="menu-header" href="<?php echo home_url('/privacy'); ?>">Privacy Policy</a></li><!-- <li>
+						<a class="menu-header" href="<?php // echo home_url('/comment-moderation'); ?>">Comment Rules</a></li> -->
 				</ul>
 			</div>
 		</div>
-							  <center><script type="text/javascript" language="JavaScript">
+		
+		<div class="bottom-728-ad" align="center" style="padding:10px;">
+			<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 728 #2 - Bottom -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2727072243882391"
+     data-ad-slot="6360711462"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></center> 
+		</div>
+		
+		<div class="bottom-glam-logo" align="center" style="padding:5px;">
+			<center><script type="text/javascript" language="JavaScript">
 glam_affiliate_id = '348475431';
 glam_logo_type = 'GEnter';
 glam_logo_size = '160x24';
@@ -45,5 +59,7 @@ glam_gs_logo_color = 'blk';
 glam_logo_country = 'US';
 </script>
 <script src="http://www8.glam.com/js/widgets/glammedia_logo.js"></script></center>
+	</div>
+	<p style="text-align:center;color:#fff;padding:10px;margin:0;">&copy; 2006 - 2014 GOT MEDIA</p>
 	</div>
 </footer>

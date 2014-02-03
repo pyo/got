@@ -24,16 +24,24 @@
 			<!-- end ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Wide Skyscraper - 160 x 600 -->
 		</div>
 		<div style="margin-bottom:10px;" align="center">
-			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis_FLOOR.com -->
+			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis.com -->
 			<!-- Size: 300x250 -->
-			<script src="http://ads-by.madadsmedia.com/tags/970/1194/async/300x250.js" type="text/javascript"></script>
-			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis_FLOOR.com -->
+			<script language="JavaScript" type="text/javascript">
+			var prot = document.location.protocol;
+			document.write('<script language="JavaScript" type="text/javascript"'); document.write('src="'+prot+'//ads-by.madadsmedia.com/tags/970/1041/async/300x250.js">'); document.write('<\/scr' + 'ipt>');
+			</script>
+			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis.com -->
 		</div>
 		<div style="margin-bottom:10px;" align="center">
-			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis_FLOOR.com -->
-			<!-- Size: 160x600 -->
-			<script src="http://ads-by.madadsmedia.com/tags/970/1194/async/160x600.js" type="text/javascript"></script>
-			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis_FLOOR.com -->
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- 160 sidebar standalone -->
+			<ins class="adsbygoogle"
+			     style="display:inline-block;width:160px;height:600px"
+			     data-ad-client="ca-pub-2727072243882391"
+			     data-ad-slot="4604776666"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
 		</div>
 	</div>
 </div>
