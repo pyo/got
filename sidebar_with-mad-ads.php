@@ -14,12 +14,7 @@
 	</div>			
 	<?php get_template_part('/parts/shared/follow_us'); ?>
 	<div class="sidebar-ad-container">
-		
-		<div style="margin-bottom:10px;" align="center">
-			<script>var ACE_AR = {Site: '852903', Size: '300250'};</script> <script language="Javascript" src="http://uac.advertising.com/wrapper/aceUAC.js"></script>
-		</div>
-		
-		<div style="margin-bottom:10px;" align="center">
+		<div class="sidebar-160-ad" align="center">
 			<!-- Javascript tag: -->
 			<!-- begin ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Wide Skyscraper - 160 x 600 -->
 			<script language="JavaScript">
@@ -28,26 +23,23 @@
 			<script language="JavaScript" src="http://d3.zedo.com/jsc/d3/fo.js"></script>
 			<!-- end ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Wide Skyscraper - 160 x 600 -->
 		</div>
-		
-		<div style="margin-bottom:10px;" align="center">
-			<SCRIPT>var ACE_AR = {Site: '852899', Size: '160600'};</SCRIPT> <SCRIPT language='JavaScript' src='http://uac.advertising.com/wrapper/aceUAC.js'></SCRIPT>
+		<div class="sidebar-300-ad" align="center">
+			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis.com -->
+			<!-- Size: 300x250 -->
+			<script language="JavaScript" type="text/javascript">
+			var prot = document.location.protocol;
+			document.write('<script language="JavaScript" type="text/javascript"'); document.write('src="'+prot+'//ads-by.madadsmedia.com/tags/970/1041/async/300x250.js">'); document.write('<\/scr' + 'ipt>');
+			</script>
+			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis.com -->
 		</div>
-		
-		<div style="margin-bottom:10px;" align="center">
-			<SCRIPT>var ACE_AR = {Site: '905432', Size: '300600'};</SCRIPT> <SCRIPT language='JavaScript' src='http://uac.advertising.com/wrapper/aceUAC.js'></SCRIPT>
-			<!-- <script type="text/javascript" src="http://ap.lijit.com///www/delivery/fpi.js?z=249850&u=gossiponthis&width=300&height=600"></script> -->
+		<div class="sidebar-160-ad" align="center">
+			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis.com -->
+			<!-- Size: 160x600 -->
+			<script language="JavaScript" type="text/javascript">
+			var prot = document.location.protocol;
+			document.write('<script language="JavaScript" type="text/javascript"'); document.write('src="'+prot+'//ads-by.madadsmedia.com/tags/970/1041/async/160x600.js">'); document.write('<\/scr' + 'ipt>');
+			</script>
+			<!-- MadAdsMedia.com Asynchronous Ad Tag For GossipOnThis.com -->
 		</div>
-		
-		<div style="margin-bottom:10px;" align="center">
-			<SCRIPT>var ACE_AR = {Site: '909537', Size: '160600'};</SCRIPT> <SCRIPT language='JavaScript' src='http://uac.advertising.com/wrapper/aceUAC.js'></SCRIPT>
-		</div>
-		
-		<div style="margin-bottom:10px" align="center">
-			<!-- begin yashi 160x250 ad tag -->
-			<!-- <script type="text/javascript" src="http://ads.yashi.com/18880"></script> -->
-			<!-- /end yashi 160x600 ad tag -->
-			<script type="text/javascript" src="http://ap.lijit.com///www/delivery/fpi.js?z=248690&u=gossiponthis&width=160&height=600"></script>
-		</div>
-		
 	</div>
 </div>

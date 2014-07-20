@@ -1,7 +1,7 @@
 <header>
 	<div class="row">
 		<div class="tweventyfour columns">
-			<div align="center" style="margin-left:10px;margin-top:15px;">
+			<div id="billboard-ad-wrapper" align="center" style="margin-left:10px;margin-top:15px;">
 				<script type="text/javascript" language="javascript" src="http://www2.glam.com/app/site/affiliate/viewChannelModule.act?mName=viewAdJs&affiliateId=348475431&adSize=970x66"></script>
 			</div>
 		</div>

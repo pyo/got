@@ -19,6 +19,7 @@
 						$content = get_the_content(); 
 						$post->featured_image = get_first_image();
 						$link = get_permalink();
+						$link_file = wp_get_attachment_url($post->ID);
 						$author = get_the_author();
 						$date = get_the_date();
 						$post_type = wp_get_post_terms($post->ID, 'got_format');
@@ -38,14 +39,18 @@
 						<?php endif; ?>
 					</div>
 
-					<h1><?php echo '<a href="' . $link . '">' . $title . '</a>'; ?></h1>
+					<h2><?php echo $title; ?></h2>
+					
+					<div class="s-link">
+					<p><strong>Go Back To: <a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?> &raquo;</a></strong></p>
+					</div>
 					
 					<div class="banner-wrapper">
 						<div class="header-banner no-margin-top cf">
 							
 							<?php social_count(); ?>
 							
-							<p id="article-author"><?php echo $date . ' by ' . $author; ?></p>
+							<p id="article-author"><?php // echo $date . ' by ' . $author; ?></p>
 
 							<?php next_post_link('%link', 'Next', false); ?>
 
@@ -82,10 +87,14 @@
 					<?php get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
 				</div>
 				<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left" style="padding-left:10px">
+					<div id="paging" class="group">
+								<p class="alignleft" id="next-post-link"><?php previous_image_link( false, 'Previous Picture' ); ?></p>
+								<p class="alignright" id="previous-post-link"><?php next_image_link( false, 'Next Picture' ); ?></p>
+							</div>
 					<?php 
 						if ( $post->guid ) {
 							
-							echo '<img src="' . $post->guid . '">';
+							echo '<a target="_blank" href="' . $link_file . '">' . '<img src="' . $post->guid . '">' . '</a>';
 						
 							if ( $post->post_excerpt )
 								echo '<p>' . $post->post_excerpt . '</p>';
@@ -93,9 +102,18 @@
 						}
 
 
-						echo '<hr />';
+						// echo '<hr />';
 
 						?>
+						
+						<div id="paging" class="group">
+									<p class="alignleft" id="next-post-link"><?php previous_image_link( false, 'Previous Picture' ); ?></p>
+									<p class="alignright" id="previous-post-link"><?php next_image_link( false, 'Next Picture' ); ?></p>
+								</div>
+								
+								<div class="s-link" style="clear:both;">
+								<p><strong>Go Back To: <a href="<?php echo get_permalink($post->post_parent); ?>" rev="attachment"><?php echo get_the_title($post->post_parent); ?> &raquo;</a></strong></p>
+								</div>
 
 						<div class="navigation row cf">
 							<ul class="block-grid two-up">

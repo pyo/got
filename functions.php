@@ -92,10 +92,23 @@
 		 */
 		wp_register_style( 'screen', get_stylesheet_directory_uri() . '/stylesheets/app.css', '', '1.1', 'screen' );
         wp_enqueue_style( 'screen' );
-	}	
+	}
+	
 
-
-
+	/************
+	 * RSS POST THUMBNAIL
+	 *************
+	 */
+	function rss_post_thumbnail($content) {
+		global $post;
+		if(has_post_thumbnail($post->ID)) {
+			$content = get_the_post_thumbnail($post->ID, 'full') . $content;
+		}
+		return $content;
+	}
+	add_filter('the_excerpt_rss', 'rss_post_thumbnail');
+	add_filter('the_content_feed', 'rss_post_thumbnail');	
+	
 
 	/*** 
 	 * Meta Boxes
@@ -215,7 +228,7 @@
 	$fields = array(
 		array( // Text Input
 			'label'	=> 'Article Short Title', // <label>
-			'desc'	=> 'An abbreviated title.', // description
+			'desc'	=> 'An abbreviated title no more than 65-75 chars.', // description
 			'id'	=> 'short_title', // field id and name
 			'type'	=> 'text' // type of field
 		),
@@ -1208,6 +1221,7 @@
 	<meta property="og:url" content="<?php the_permalink(); ?>" />
 	<meta property="og:description" content="<?php echo $description ?>" />
 	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
+	
 
 	<?php 	
 		}

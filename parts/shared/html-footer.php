@@ -94,15 +94,20 @@
 	var sc_project=8160324; 
 	var sc_invisible=1; 
 	var sc_security="02cf53c7"; 
+	var sc_https=1; 
+	var scJsHost = (("https:" == document.location.protocol) ?
+	"https://secure." : "http://www.");
+	document.write("<sc"+"ript type='text/javascript' src='" +
+	scJsHost+
+	"statcounter.com/counter/counter.js'></"+"script>");
 	</script>
-	<script type="text/javascript"
-	src="http://www.statcounter.com/counter/counter.js"></script>
-	<noscript><div class="statcounter"><a title="tumblr hit
-	tracking tool" href="http://statcounter.com/tumblr/"
+	<noscript><div class="statcounter"><a title="web counter"
+	href="http://statcounter.com/free-hit-counter/"
 	target="_blank"><img class="statcounter"
 	src="http://c.statcounter.com/8160324/0/02cf53c7/1/"
-	alt="tumblr hit tracking tool"></a></div></noscript>
+	alt="web counter"></a></div></noscript>
 	<!-- End of StatCounter Code for Default Guide -->
+
 	<!-- Begin Comscore Tag -->
 	<script>
 	  var _comscore = _comscore || [];
@@ -117,15 +122,11 @@
 	  <img src="http://b.scorecardresearch.com/p?c1=2&c2=6035233&cv=2.0&cj=1" />
 	</noscript>
 	<!-- /End Comscore Tag -- >
-	<!-- Javascript tag: -->
-	<!-- begin ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Slider - 1 x 1 -->
-	<script language="JavaScript">
-	var zflag_nid="795"; var zflag_cid="24"; var zflag_sid="17"; var zflag_width="1"; var zflag_height="1"; var zflag_sz="94"; 
-	</script>
-	<script language="JavaScript" src="http://d3.zedo.com/jsc/d3/fo.js"></script>
-	<!-- end ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Slider - 1 x 1 -->
+	<!-- BEGIN GUMGUM CODE -->
 	<script type="text/javascript">ggv2id='9e96ec51';</script>
 	<script type="text/javascript" src="http://g2.gumgum.com/javascripts/ggv2.js"></script>
+	<!-- /END GUMGUM CODE -->
+	<script type="text/javascript" src="http://www.lijit.com/blog_wijits?json=0&amp;id=trakr&amp;uri=http%3A%2F%2Fwww.lijit.com%2Fusers%2Fgossiponthis&amp;js=1"></script>
 	</div>
 	</body>
 </html>

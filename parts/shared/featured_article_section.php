@@ -5,7 +5,7 @@
 		// It wasn't there, so regenerate the data and save the transient
 		//
 		$args = array(
-			'posts_per_page' 	=> 10,
+			'posts_per_page' 	=> 30,
 			'post_type' 		=> 'post',
 			'meta_key' 			=> 'got_sidebar_feature',
 			'order' 			=> 'DESC'

@@ -37,15 +37,7 @@
 		</div>
 		
 		<div class="bottom-728-ad" align="center" style="padding:10px;">
-			<center><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 728 #2 - Bottom -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-2727072243882391"
-     data-ad-slot="6360711462"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script></center> 
+			<center><script type="text/javascript" src="http://ap.lijit.com///www/delivery/fpi.js?z=241317&u=gossiponthis&width=728&height=90"></script></center> 
 		</div>
 		
 		<div class="bottom-glam-logo" align="center" style="padding:5px;">
@@ -61,5 +53,15 @@ glam_logo_country = 'US';
 <script src="http://www8.glam.com/js/widgets/glammedia_logo.js"></script></center>
 	</div>
 	<p style="text-align:center;color:#fff;padding:10px;margin:0;">&copy; 2006 - 2014 GOT MEDIA</p>
+	
+		<div class="bottom-728-ad" align="center" style="padding:10px;padding-bottom:40px;">
+			<center>
+				<!-- begin yashi 728x90 ad tag -->
+				<!-- <script type="text/javascript" src="http://ads.yashi.com/18884"></script> -->
+				<!-- /end yashi 728x90 ad tag -->
+				<SCRIPT>var ACE_AR = {Site: '909539', Size: '728090'};</SCRIPT><SCRIPT language='JavaScript' src='http://uac.advertising.com/wrapper/aceUAC.js'></SCRIPT>
+			</center>
+		</div>
+	
 	</div>
 </footer>
