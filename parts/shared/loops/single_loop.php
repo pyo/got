@@ -91,10 +91,10 @@
 		</div>
 	</div>
 	<div class="row" id="article-row">
-		<div class="six columns">
-			<?php get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
-		</div>
-		<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left" style="padding-left:15px;">
+		<!-- <div class="six columns">
+			<?php // get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
+		</div> -->
+		<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left single-page-loop">
 			<?php 
 				if ( empty( $post_type ) || $post_type[0]->slug == 'standard-format' ) {
 					//
@@ -133,6 +133,10 @@
 				echo '<div class="fb-like" data-href="' . $link . '" data-width="480" data-layout="button_count" data-show-faces="false" data-send="false"></div>';
 				
 				edit_post_link( 'Edit Post', '<div class="edit-button">', '</div>');
+				
+				echo '<hr />';
+				
+				get_template_part('/parts/shared/taboola_below_articles');
 
 				//tags
 
@@ -207,6 +211,26 @@
 			</div>
 		</div>
 		<div class="row">
+			<script type='text/javascript'>
+			var _CI = _CI || {};
+			(function() {
+			var script = document.createElement('script');
+			ref = document.getElementsByTagName('script')[0];
+			_CI.counter = (_CI.counter) ? _CI.counter + 1 : 1;
+			document.write('<div id="_CI_widget_');
+			document.write(_CI.counter+'"></div>');
+			script.type = 'text/javascript';
+			script.src = 'http://widget.crowdignite.com/widgets/32369?v=2&_ci_wid=_CI_widget_'+_CI.counter;
+			script.async = true;
+			ref.parentNode.insertBefore(script, ref);
+			})(); </script>
+			<style>
+			#_ci_widget_div_32369 ul{list-style-type:none;margin:0;padding:0;min-height:160px;width:680px;}
+			#_ci_widget_div_32369 ul li{display:inline-block;min-height:150px;vertical-align:top;width:120px;line-height:normal;margin:4px 8px 2px;}
+			#_ci_widget_div_32369 ul li a > img{margin-bottom:0;}
+			#_ci_widget_div_32369 .ci_text{display:block;margin-top:2px;}
+			#_ci_widget_div_32369 .ci_text > a{font-family:Helvetica;font-size:14px;line-height:normal;text-decoration:underline;font-weight:700;color:#000;}
+			</style>
 			<!-- BEGIN ZERGNET WIDGET -->
 			<div id="zergnet-widget-21615"></div>
 

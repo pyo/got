@@ -83,10 +83,10 @@
 				</div>
 			</div>
 			<div class="row" id="article-row">
-				<div class="six columns">
-					<?php get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
-				</div>
-				<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left" style="padding-left:10px">
+				<!-- ><div class="six columns">
+					<?php // get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
+				</div> -->
+				<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left single-page-loop">
 					<div id="paging" class="group">
 								<p class="alignleft" id="next-post-link"><?php previous_image_link( false, 'Previous Picture' ); ?></p>
 								<p class="alignright" id="previous-post-link"><?php next_image_link( false, 'Next Picture' ); ?></p>

@@ -4,3 +4,10 @@ Description: 	A custom theme for GossipOnThis
 Version: 		1.0
 Author: 		Jackson Hoose
 */
+
+/* ADDITIONAL CSS
+==============================================================================*/
+
+#taboola-below-article {
+	padding-top:10px;
+}

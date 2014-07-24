@@ -2,7 +2,12 @@
 	<div align="center">
 		<?php get_template_part('/parts/shared/sidebar_ad'); ?>	
 	</div>
-	<?php get_template_part('/parts/shared/hot_right_now'); ?>	
+	<?php get_template_part('/parts/shared/hot_right_now'); ?>
+	<?php if ( is_single() || is_page() ) : ?>
+	<div style="margin-bottom:10px;"  align="center">
+		<script type="text/javascript" language="javascript" src="http://www2.glam.com/app/site/affiliate/viewChannelModule.act?mName=viewAdJs&affiliateId=348475431&adSize=160x600"></script>
+	</div>
+	<?php endif; ?>
 	<div style="margin-bottom:10px;" align="center">
 		<!-- Javascript tag: -->
 		<!-- begin ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Medium Rectangle - 300 x 250 -->
@@ -11,7 +16,7 @@
 		</script>
 		<script language="JavaScript" src="http://d3.zedo.com/jsc/d3/fo.js"></script>
 		<!-- end ZEDO for channel: GossipOnThis.com ros , publisher: GossipOnThis.com , Ad Dimension: Medium Rectangle - 300 x 250 -->
-	</div>			
+	</div>
 	<?php get_template_part('/parts/shared/follow_us'); ?>
 	<div class="sidebar-ad-container">
 		

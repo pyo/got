@@ -58,10 +58,10 @@
 		</div>
 	</div>
 	<div class="row" id="article-row">
-		<div class="six columns">
-			<?php get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
-		</div>
-		<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left" style="padding-left:15px;">
+		<!-- <div class="six columns">
+			<?php // get_template_part('/parts/shared/ads/skyscraper_ad'); ?>
+		</div> -->
+		<div class="eighteen columns pad-top <?php if(!empty($post_type)) echo $post_type[0]->slug; ?>  pad-left single-page-loop">
 			<?php the_content(); ?>		
 		</div>
 	</div>
