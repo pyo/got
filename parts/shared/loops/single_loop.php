@@ -134,6 +134,8 @@
 				
 				edit_post_link( 'Edit Post', '<div class="edit-button">', '</div>');
 				
+				get_template_part('/parts/shared/ads/google_300_ad');
+				
 				echo '<hr />';
 				
 				get_template_part('/parts/shared/taboola_below_articles');
@@ -252,17 +254,6 @@
 	    e9.size = "336x280,300x250,300x600";
 	//--></script>
 	<script type="text/javascript" src="http://tags.expo9.exponential.com/tags/GossipOnThis/httpgossiponthiscom/tags.js"></script>
-    <div style="display:none;"><script type="text/javascript"><!--
-google_ad_client = "ca-pub-2727072243882391";
-/* 300x250, created 3/15/10 */
-google_ad_slot = "7204750745";
-google_ad_width = 300;
-google_ad_height = 250;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script></div>
 	</div>
 	<div class="row">
 		<div class="twentyfour columns comment_column" style="border-top:1px solid #eaeaea;padding-top:14px;">
