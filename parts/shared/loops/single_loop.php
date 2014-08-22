@@ -43,6 +43,8 @@
 
 			<h1><?php // echo '<a href="' . $link . '">' . $title . '</a>'; ?><?php echo $title; ?></h1>
 			
+			<!-- <p class="headline-subtitle"><?php // the_subtitle(); ?></p> -->
+			
 			<div class="banner-wrapper">
 				<div class="header-banner no-margin-top cf">
 					

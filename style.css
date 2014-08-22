@@ -9,5 +9,11 @@ Author: 		Jackson Hoose
 ==============================================================================*/
 
 #taboola-below-article {
-	padding-top:10px;
+	padding-top:10px!important;
+}
+
+p.headline-subtitle {
+	font-family:"proxima-nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:20px!important;
+	font-weight:600;
 }

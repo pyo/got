@@ -104,7 +104,7 @@ var _prum = [['id', '523bedc4abe53d5f2e000000'],
   document.getElementsByTagName('script')[0],
   'http://cdn.taboola.com/libtrc/gossiponthis/loader.js');
 </script>
-<!-- /END TABOOLA JSCRIPT>
+<!-- /END TABOOLA JSCRIPT> -->
 
 		<?php wp_head(); ?>
 		<link rel='stylesheet' id='screen-css'  href="http://gossiponthis.com/wp-content/themes/GoTTheme/style.css" type='text/css' media='screen' />
