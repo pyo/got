@@ -47,7 +47,7 @@
 			wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', NULL, '1.9.1', false );
 			wp_enqueue_script( 'jquery' );
 			
-			wp_enqueue_script('site', get_template_directory_uri() . '/javascripts/site.uglify.min.js', null, '1.0', true);
+			wp_enqueue_script('site', get_template_directory_uri() . '/javascripts/dist/site.ugly.js', array('jquery'), '1.0', true);
 		
 		}
 		
