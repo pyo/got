@@ -1,0 +1,34 @@
+{
+  "name": "GoT",
+  "version": "0.0.0",
+  "description": "got",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pyo/got.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pyo/got/issues"
+  },
+  "homepage": "https://github.com/pyo/got",
+  "devDependencies": {
+    "gulp": "~3.8.6",
+    "gulp-watch": "~0.6.8",
+    "gulp-uglify": "~0.3.1",
+    "gulp-concat": "~2.3.3",
+    "gulp-imagemin": "~0.6.1",
+    "gulp-compass": "~1.1.9",
+    "gulp-minify-css": "~0.3.6",
+    "imagemin-pngcrush": "~0.1.0",
+    "gulp-image": "~0.4.2"
+  },
+  "dependencies": {
+    "gulp-jshint": "~1.8.4",
+    "jshint-stylish": "~0.4.0"
+  }
+}
