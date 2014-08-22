@@ -4,3 +4,16 @@ Description: 	A custom theme for GossipOnThis
 Version: 		1.0
 Author: 		Jackson Hoose
 */
+
+/* ADDITIONAL CSS
+==============================================================================*/
+
+#taboola-below-article {
+	padding-top:10px!important;
+}
+
+p.headline-subtitle {
+	font-family:"proxima-nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:20px!important;
+	font-weight:600;
+}

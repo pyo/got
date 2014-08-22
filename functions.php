@@ -1,56 +1,8 @@
 <?php
 
-	/**
-	 * Starkers functions and definitions
-	 *
-	 * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
-	 *
- 	 * @package 	WordPress
- 	 * @subpackage 	Starkers
- 	 * @since 		Starkers 4.0
-	 */
-	/*** 
-	 * misc
-	 */
 	remove_action('wp_head', 'wp_generator');
-
-	/* ========================================================================================================================
-	
-	Required external files
-	
-	======================================================================================================================== */
-
 	require_once( 'external/starkers-utilities.php' );
-
-	/* ========================================================================================================================
-	
-	Theme specific settings
-
-	Uncomment register_nav_menus to enable a single menu with the title of "Primary Navigation" in your theme
-	
-	======================================================================================================================== */
-
-	//add_theme_support('post-thumbnails');
-	
-	// register_nav_menus(array('primary' => 'Primary Navigation'));
-
-	/* ========================================================================================================================
-	
-	Actions and Filters
-	
-	======================================================================================================================== */
-
 	add_action( 'wp_enqueue_scripts', 'script_enqueuer' );
-
-	//add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
-
-	/* ========================================================================================================================
-	
-	Custom Post Types - include custom post types and taxonimies here e.g.
-
-	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
-	
-	======================================================================================================================== */
 
 
 	/*** 
@@ -71,13 +23,6 @@
 		// add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
 	
 	}
-
-
-	/* ========================================================================================================================
-	
-	Scripts
-	
-	======================================================================================================================== */
 
 	/**
 	 * Add scripts via wp_head()
@@ -101,9 +46,11 @@
 			wp_deregister_script( 'jquery' );
 			wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', NULL, '1.9.1', false );
 			wp_enqueue_script( 'jquery' );
-			wp_enqueue_script('site', get_template_directory_uri() . '/javascripts/site.uglify.min.js', null, '1', true);
-
+			
+			wp_enqueue_script('site', get_template_directory_uri() . '/javascripts/site.uglify.min.js', null, '1.0', true);
+		
 		}
+		
 		// wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', NULL, '1.9.1', false );
 		// wp_enqueue_script( 'jquery' );
 
@@ -145,17 +92,28 @@
 		 */
 		wp_register_style( 'screen', get_stylesheet_directory_uri() . '/stylesheets/app.css', '', '1.1', 'screen' );
         wp_enqueue_style( 'screen' );
-	}	
+	}
+	
 
-	/* ========================================================================================================================
+	/************
+	 * RSS POST THUMBNAIL
+	 *************
+	 */
+	function rss_post_thumbnail($content) {
+		global $post;
+		if(has_post_thumbnail($post->ID)) {
+			$content = get_the_post_thumbnail($post->ID, 'full') . $content;
+		}
+		return $content;
+	}
+	add_filter('the_excerpt_rss', 'rss_post_thumbnail');
+	add_filter('the_content_feed', 'rss_post_thumbnail');	
 	
-	Comments
-	
-	======================================================================================================================== */
 
-	
+	/*** 
+	 * Meta Boxes
+	 */
 	require_once 'metaboxes/meta_box.php';
-
 
 	$prefix = 'got_';
 
@@ -270,7 +228,7 @@
 	$fields = array(
 		array( // Text Input
 			'label'	=> 'Article Short Title', // <label>
-			'desc'	=> 'An abbreviated title.', // description
+			'desc'	=> 'An abbreviated title no more than 65-75 chars.', // description
 			'id'	=> 'short_title', // field id and name
 			'type'	=> 'text' // type of field
 		),
@@ -281,15 +239,17 @@
 			'type'	=> 'checkbox_group', // type of field
 			'options' => array ( // array of options
 				'one' => array (
-					'label' => 'Featured',
-					'value'	=> 'featured'
-				),
-				'two' => array (
 					'label' => 'Super Feature',
 					'value'	=> 'super_feature'
 				)
 			)
 		),
+		array( // Single checkbox
+                'label' => 'Featured in Sidebar?', // <label>
+                'desc' => 'Featured', // description
+                'id' => $prefix . 'sidebar_feature', // field id and name
+                'type' => 'checkbox' // type of field
+        ),
 		array( // Taxonomy Select box
 			'label'	=> 'Post Format', // <label>
 			// the description is created in the callback function with a link to Manage the taxonomy terms
@@ -310,7 +270,7 @@
 		),
 	);
 
-
+	
 	/**
 	 * Instantiate the class with all variables to create a meta box
 	 * var $id string meta box id
@@ -344,80 +304,6 @@
 	//	home
 	//
 	$fields = array(
-		// array( // Select box
-		// 	'label'	=> 'Hero Layout', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=> $prefix.'hero_layout', // field id and name
-		// 	'type'	=> 'select', // type of field
-		// 	'options' => array ( // array of options
-		// 		'one' => array ( // array key needs to be the same as the option value
-		// 			'label' => '1', // text displayed as the option
-		// 			'value'	=> '1' // value stored for the option
-		// 		),
-		// 		'two' => array (
-		// 			'label' => '2',
-		// 			'value'	=> '2'
-		// 		),
-		// 		'three' => array (
-		// 			'label' => '3',
-		// 			'value'	=> '3'
-		// 		),
-		// 		'four' => array ( // array key needs to be the same as the option value
-		// 			'label' => '4', // text displayed as the option
-		// 			'value'	=> '4' // value stored for the option
-		// 		),
-		// 		'five' => array (
-		// 			'label' => '5',
-		// 			'value'	=> '5'
-		// 		),
-		// 		'six' => array (
-		// 			'label' => '6',
-		// 			'value'	=> '6'
-		// 		)
-		// 	)
-		// ),
-		// array( // Post ID select box
-		// 	'label'	=> 'Hero Post 1', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=>  $prefix.'hero_layout_1', // field id and name
-		// 	'type'	=> 'post_select', // type of field
-		// 	'post_type' => array('post','page') // post types to display, options are prefixed with their post type
-		// ),
-		// array( // Post ID select box
-		// 	'label'	=> 'Hero Post 2', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=>  $prefix.'hero_layout_2', // field id and name
-		// 	'type'	=> 'post_select', // type of field
-		// 	'post_type' => array('post','page') // post types to display, options are prefixed with their post type
-		// ),
-		// array( // Post ID select box
-		// 	'label'	=> 'Hero Post 3', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=>  $prefix.'hero_layout_3', // field id and name
-		// 	'type'	=> 'post_select', // type of field
-		// 	'post_type' => array('post','page') // post types to display, options are prefixed with their post type
-		// ),
-		// array( // Post ID select box
-		// 	'label'	=> 'Hero Post 4', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=>  $prefix.'hero_layout_4', // field id and name
-		// 	'type'	=> 'post_select', // type of field
-		// 	'post_type' => array('post','page') // post types to display, options are prefixed with their post type
-		// ),
-		// array( // Post ID select box
-		// 	'label'	=> 'Hero Post 5', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=>  $prefix.'hero_layout_5', // field id and name
-		// 	'type'	=> 'post_select', // type of field
-		// 	'post_type' => array('post','page') // post types to display, options are prefixed with their post type
-		// ),
-		// array( // Post ID select box
-		// 	'label'	=> 'Hero Post 6', // <label>
-		// 	'desc'	=> '', // description
-		// 	'id'	=>  $prefix.'hero_layout_6', // field id and name
-		// 	'type'	=> 'post_select', // type of field
-		// 	'post_type' => array('post','page') // post types to display, options are prefixed with their post type
-		// ),
 		array( // Select box
 			'label'	=> 'Trending Topic Count', // <label>
 			'desc'	=> '', // description
@@ -700,19 +586,6 @@
 	}
 
 
-	/***
-	 * Post Links
-	 */
-	//add_filter('next_posts_link_attributes', 'next_post_link_attr');
-
-	// function add_class_next_post_link( $html ){
-	//     if (is_single() || is_page() || is_singular())
-	//     	$html = str_replace('<a', '<a class="next-article paging alignright"', $html);
-	    
-	//     return $html;
-	// }
-	// add_filter('next_post_link','add_class_next_post_link',10,1);
-	
 	function is_next_gen($content) {
 		$match = '.*?(nggallery)';	# Variable Name 1
 
@@ -800,123 +673,10 @@
 		if($wp_query->get('category')) 
 			$wp_query->set('post_type', 'any');
 
-		// if($wp_query->is_main_query() && ( is_tax('vertical', 'celebs') || is_tax('vertical', 'entertainment') || is_tax('vertical', 'news') || is_tax('vertical', 'more') ) ) {
-		// 	$tax = $wp_query->queried_object->term_id;
-		// 	if ($tax) 
-		// 		$tax = get_term_children($tax, 'vertical');
-
-		// 	//print_r($tax);
-
-		// 	//$wp_query->set('')
-		// 	print_r($wp_query);
-
-		// }
 
 		if($wp_query->is_main_query() && !is_singular() && !is_admin())
 			$wp_query->set('posts_per_page', 20);
 
-		//if (is_tax('vertical', array('news','celebs','entertainment','tv','hip-hop','sports','politics','tech'))) print_r($wp_query); 
-
-		//
-		// verticals
-		//
-		// if(is_tax('vertical') && !is_admin() && !is_singular()){
-		// 	//
-		// 	//	get current tax term
-		// 	//
-		// 	$current_term = $wp_query->get('term');
-
-		// 	//print_r($wp_query->get('term'));
-		// 	//
-		// 	//	make sure we got the vertical name
-		// 	//		
-		// 	// if ($current_term) {
-		// 	// 	//
-		// 	// 	// 	check for cached results
-		// 	// 	//
-		// 	// 	if (false === ($results = get_transient($current_term . '_super_featured'))) {
-					
-		// 	// 		$args = array(
-		// 	// 				'posts_per_page' 	=> 1,
-		// 	// 				'post_type' 		=> array('post','page'),
-		// 	// 				'meta_key' 			=> 'got_featured_select',
-		// 	// 				'order' 			=> 'ASC',
-		// 	// 				'meta_query' 		=> array(
-		// 	// 					array(
-		// 	// 						'key' 		=> 'got_featured_select',
-		// 	// 						'value' 	=> 'super_feature',
-		// 	// 						'compare' 	=> 'IN',
-		// 	// 					)
-		// 	// 				),
-		// 	// 				'tax_query' 		=> array(
-		// 	// 					array(
-		// 	// 						'taxonomy' 	=> 'vertical',
-		// 	// 						'field' 	=> 'slug',
-		// 	// 						'terms' 	=> $current_term
-		// 	// 					)
-		// 	// 				)
-		// 	// 			);
-
-		// 	// 		//
-		// 	// 		// run query
-		// 	// 		//
-		// 	// 		 	$results['super_featured'] = new WP_Query($args);
-
-		// 	// 		// 	//
-		// 	// 		// 	// args for standard featured post
-		// 	// 		// 	//
-		// 	// 			$args = array(
-		// 	// 				'posts_per_page' 	=> 4,
-		// 	// 				'post_type' 		=> array('post','page'),
-		// 	// 				'meta_key' 			=> 'got_featured_select',
-		// 	// 				'order' 			=> 'ASC',
-		// 	// 				'meta_query' 		=> array(
-		// 	// 					array(
-		// 	// 						'key' 		=> 'got_featured_select',
-		// 	// 						'value' 	=> 'featured',
-		// 	// 						'compare' 	=> 'IN',
-		// 	// 					)
-		// 	// 				),
-		// 	// 				'tax_query' => array(
-		// 	// 					array(
-		// 	// 						'taxonomy' 	=> 'vertical',
-		// 	// 						'field' 	=> 'slug',
-		// 	// 						'terms' 	=> $current_term
-		// 	// 					)
-		// 	// 				)
-		// 	// 			);
-
-		// 	// 		// 	//
-		// 	// 		// 	//
-		// 	// 		// 	//
-		// 	// 			$results['featured'] = new WP_Query($args);
-
-		// 	// 		//
-		// 	// 		//	cache results
-		// 	// 		//
-		// 	// 		set_transient( $current_term . '_super_featured', $results, 60*1*1 );
-				
-		// 	// 	}
-
-		// 	// 	//
-		// 	// 	//	iterate over posts to get all ID's
-		// 	// 	//
-		// 	// 	if (!empty($results)) {
-		// 	// 		foreach ($results as $result) {
-		// 	// 			for ($i=0; $i < count($result->posts); $i++) { 
-		// 	// 				$exclude_ids[] = $result->posts[$i]->ID;
-		// 	// 			}
-		// 	// 		}
-		// 	// 	}
-
-		// 	// 	//
-		// 	// 	//	since we're on an taxonomy page and we already have the results just add it to the object
-		// 	// 	//
-		// 	// 	$wp_query->featured_vertical_posts = $results;
-					
-		// 	// }	
-
-		// }
 
 		//
 		// if it isnt empty return the array full of bad id's to exclude
@@ -1030,13 +790,6 @@
 			//return get_site_url() . '/media/resizer/' . $w . 'x' . $h . '/r/' . $img . '/c/' . $zc;
 			return get_template_directory_uri() . '/external/thumb/thumb.php?w=' . $w . $h . '&src=http://' . $img . '&q=100&a=' . $a . '&zc=' . $zc;
 		}
-
-	}
-
-	function filter_where( $where = '' ) {
-		// posts in the last 30 days
-		$where .= " AND post_date > '" . date('Y-m-d', strtotime('-7 days')) . "'";
-		return $where;
 
 	}
 
@@ -1205,29 +958,22 @@
 	function get_first_image($post_id = null, $post_content = null){
 		global $post;
 
-		if (is_null($post_id)) {
-			if(!isset($post))
-				return;
-		}
-
-
-
 		$first_img = '';
 
-		$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
+		$featured_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 
 		if ($featured_image) {
 		 	return $featured_image[0];
 		
 		} else {
 
-			// if($post->post_content)
-			// 	$post_content = $post->post_content;
+			if($post->post_content)
+				$post_content = $post->post_content;
 
-			//if(is_null($post_content) && !$post->post_content){
+			if(is_null($post_content) && !$post->post_content){
 				$post_obj = get_post($post_id);
 				$post_content = $post_obj->post_content;
-			//}
+			}
 
 			if ($post_content) {
 				ob_start();
@@ -1264,52 +1010,89 @@
 
 		$tax = 'vertical';
 
-		$page_id = 181890;
-		$part = 'home';
+		// $celebs = get_term_children(7652, $tax);
+		// $celebs[] = 7652;
 
+		// $news = get_term_children(7654, $tax);
+		// $news[] = 7654;
+
+		// if (is_tax($tax, 'celebs')) {
+		// 	$page_id = 181891;
+		// 	$part = 'celebs';
+
+		// } elseif(is_tax($tax, 'hip-hop')) {
+		// 	$page_id = 181896;
+		// 	$part = 'sports';
+
+		// } elseif (is_tax($tax, 'crime-news')) {
+		// 	$page_id = 181893;
+		// 	$part = 'crime-news';
+
+		// } elseif (is_tax($tax, 'sports')) {
+		// 	$page_id = 181898;
+		// 	$part = 'sports';
+
+		// } elseif (is_tax($tax, 'news')) {
+		// 	$page_id = 181897;
+		// 	$part = 'news';
+
+		// } elseif (is_tax($tax, 'TV')){
+		// 	$page_id = 181899;
+		// 	$part = 'TV';
+		// } else {
+			$page_id = 181890;
+			$part = 'home';
+
+		//}
 
 		//
 		// get the hero image layout
 		//
 		$num_hero 	= get_post_meta($page_id, 'got_hero_layout', true);
 
-		//if ( false === ( $header_menu_results = get_transient( $part . '_header_menu_results' ) ) ) {
+		if ( false === ( $header_menu_results = get_transient( $part . '_header_menu_results' ) ) ) {
 
-		$i = 1;
-		$ids = array();
-		//
-		// loop through the posts and load up an array
-		//
-		while ( $i <= $num_hero ) {
-			//
-			// get the post ID
-			//
-			$ids[$i]['hero_id'] = get_post_meta($page_id, 'got_hero_layout_' . $i, true);
+			$i 			= 1;
 			
 			//
-			// get the term ID, nice name and slug if its available
+			// loop through the posts and load up an array
 			//
-			if ($term_id = get_post_meta($ids[$i]['hero_id'][0], 'pinned_tag', true)) {
-				$ids[$i]['term'] = get_term($term_id, 'post_tag', ARRAY_A);
+			while ( $i <= $num_hero ) {
+				//
+				// get the post ID
+				//
+				$ids[$i]['hero_id'] = get_post_meta($page_id, 'got_hero_layout_' . $i, true);
 				
-				if($ids[$i]['term']) 
-					$ids[$i]['term']['url'] = get_term_link($ids[$i]['term']['slug'], 'post_tag');
-			
+				//
+				// get the term ID, nice name and slug if its available
+				//
+				if ($term_id = get_post_meta($ids[$i]['hero_id'][0], 'pinned_tag', true)) {
+					$ids[$i]['term'] = get_term($term_id, 'post_tag', ARRAY_A);
+					
+					if($ids[$i]['term']) 
+						$ids[$i]['term']['url'] = get_term_link($ids[$i]['term']['slug'], 'post_tag');
+				
+				}
+
+				//print_r($ids[$i]);
+
+				//
+				//	get the featured image or the first image if there is no featured image
+				//
+				$image = wp_get_attachment_image_src( get_post_thumbnail_id( $ids[$i]['hero_id'][0] ), 'full');
+
+				if ( $image ) {
+					$ids[$i]['featured_image'] 	= $image[0];
+				} else {
+					$ids[$i]['featured_image'] 	= get_first_image($ids[$i]['hero_id'][0]);
+				}
+
+				$i++;
 			}
 
-			//
-			//	get the featured image or the first image if there is no featured image
-			//
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $ids[$i]['hero_id'][0] ), 'full');
+			set_transient( $part . '_header_menu_results', $header_menu_results, 60*60*1 );
 
-			if ( $image ) {
-				$ids[$i]['featured_image'] 	= $image[0];
-			} else {
-				$ids[$i]['featured_image'] 	= get_first_image($ids[$i]['hero_id'][0]);
-			}
-
-			$i++;
-		}
+		}	
 
 		echo '<section id="hero">';
 			echo '<div class="row">';
@@ -1438,6 +1221,7 @@
 	<meta property="og:url" content="<?php the_permalink(); ?>" />
 	<meta property="og:description" content="<?php echo $description ?>" />
 	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
+	
 
 	<?php 	
 		}
@@ -1471,3 +1255,12 @@
 	// 	global $post;
 
 	// }
+
+	function get_site_short_title() {
+		global $post;
+
+		$title = get_post_meta($post->ID, 'short_title', true);
+		$title = empty($title) ? get_the_title() : $title;
+		
+		return $title;
+	}

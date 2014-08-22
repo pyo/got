@@ -5,8 +5,8 @@
 			<ul class="inline-block no-list">
 				<li>
 					<a class="menu-header" href="<?php echo home_url('/'); ?>">Front Page</a></li><li>
-					<a class="menu-header" href="<?php echo home_url('/?vertical=news'); ?>">News</a></li><li>
-					<a class="menu-header" href="<?php echo home_url('/?vertical=celebs'); ?>">Celebs</a></li><li>
+					<a class="menu-header" href="<?php echo home_url('/?vertical=the-news'); ?>">News</a></li><li>
+					<a class="menu-header" href="<?php echo home_url('/?vertical=celebrity'); ?>">Celebs</a></li><li>
 					<a class="menu-header" href="<?php echo home_url('/?vertical=entertainment'); ?>">Entertainment</a></li><li>
 					<a class="menu-header" href="<?php echo home_url('/?vertical=tv'); ?>">TV</a></li><li>	
 					<a class="menu-header" href="<?php echo home_url('/?vertical=hip-hop'); ?>">Hip-Hop</a></li><li>
@@ -30,12 +30,18 @@
 					<li>
 						<a class="menu-header" href="<?php echo home_url('/about'); ?>">About Us</a></li><li>
 						<a class="menu-header" href="<?php echo home_url('/contact'); ?>">Contact Us</a></li><li>
-						<a class="menu-header" href="<?php echo home_url('/privacy'); ?>">Privacy Policy</a></li><li>
-						<a class="menu-header" href="<?php echo home_url('/comment-moderation'); ?>">Comment Rules</a></li>
+						<a class="menu-header" href="<?php echo home_url('/privacy'); ?>">Privacy Policy</a></li><!-- <li>
+						<a class="menu-header" href="<?php // echo home_url('/comment-moderation'); ?>">Comment Rules</a></li> -->
 				</ul>
 			</div>
 		</div>
-							  <center><script type="text/javascript" language="JavaScript">
+		
+		<div class="bottom-728-ad" align="center" style="padding:10px;">
+			<center><script type="text/javascript" src="http://ap.lijit.com///www/delivery/fpi.js?z=241317&u=gossiponthis&width=728&height=90"></script></center> 
+		</div>
+		
+		<div class="bottom-glam-logo" align="center" style="padding:5px;">
+			<center><script type="text/javascript" language="JavaScript">
 glam_affiliate_id = '348475431';
 glam_logo_type = 'GEnter';
 glam_logo_size = '160x24';
@@ -45,5 +51,17 @@ glam_gs_logo_color = 'blk';
 glam_logo_country = 'US';
 </script>
 <script src="http://www8.glam.com/js/widgets/glammedia_logo.js"></script></center>
+	</div>
+	<p style="text-align:center;color:#fff;padding:10px;margin:0;">&copy; 2006 - 2014 GOT MEDIA</p>
+	
+		<div class="bottom-728-ad" align="center" style="padding:10px;padding-bottom:40px;">
+			<center>
+				<!-- begin yashi 728x90 ad tag -->
+				<!-- <script type="text/javascript" src="http://ads.yashi.com/18884"></script> -->
+				<!-- /end yashi 728x90 ad tag -->
+				<SCRIPT>var ACE_AR = {Site: '909539', Size: '728090'};</SCRIPT><SCRIPT language='JavaScript' src='http://uac.advertising.com/wrapper/aceUAC.js'></SCRIPT>
+			</center>
+		</div>
+	
 	</div>
 </footer>

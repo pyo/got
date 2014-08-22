@@ -386,16 +386,26 @@ div.banner-wrapper{
 
 #next-post-link, #previous-post-link{
 	a{
-		padding:5px;
+		padding:7px;
 		text-transform:uppercase;
 		background-color:#ccc;
 		font-size:16px;
 		line-height:36px;
 		@include border-radius(3px);
 		font-weight:800;
+		color:#fff!important;
 	}
 	a, a:hover, a:focus, a:visited, a:active{
-		color:#fff;
+		color:#fff!important;
+		text-decoration:none!important;
 	}
 }
 
+#next-post-link a:hover, #previous-post-link a:hover{
+	background-color:#bbb;
+}
+
+#article-row .single-page-loop,
+ {
+	width:100% !important;
+}

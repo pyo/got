@@ -17,7 +17,7 @@
 				$featured_img = $featured_img[0];
 			} else {
 				$featured_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-				$featured_img = tim_thumb_image(remove_http($featured_img[0]), 660, 370, 100 );
+				$featured_img = tim_thumb_image(remove_http($featured_img[0]), 660, 371, 100 );
 			}
 		}
 

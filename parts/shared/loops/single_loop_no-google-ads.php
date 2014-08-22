@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="twentyfour columns">
 			<?php 
-				// begin post loop
+				// begin post loop 
 				// load up posts obj 
 				$title = get_the_title();
 				$content = get_the_content(); 
@@ -42,8 +42,6 @@
 			</div>
 
 			<h1><?php // echo '<a href="' . $link . '">' . $title . '</a>'; ?><?php echo $title; ?></h1>
-			
-			<!-- <p class="headline-subtitle"><?php // the_subtitle(); ?></p> -->
 			
 			<div class="banner-wrapper">
 				<div class="header-banner no-margin-top cf">
@@ -135,8 +133,6 @@
 				echo '<div class="fb-like" data-href="' . $link . '" data-width="480" data-layout="button_count" data-show-faces="false" data-send="false"></div>';
 				
 				edit_post_link( 'Edit Post', '<div class="edit-button">', '</div>');
-				
-				get_template_part('/parts/shared/ads/google_300_ad');
 				
 				echo '<hr />';
 				
@@ -317,8 +313,6 @@
 				</div>
 			</section>
 		<?php endif; ?>
-		
-		<?php // get_template_part('/parts/shared/ads/300_ad_below_everything'); ?>
 
 	<?php endif; ?>
 

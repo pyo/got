@@ -92,7 +92,22 @@ var _prum = [['id', '523bedc4abe53d5f2e000000'],
 })();
 </script>
 
+<!-- BEGIN TABOOLA JSCRIPT -->
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({article:'auto'});
+  !function (e, f, u) {
+    e.async = 1;
+    e.src = u;
+    f.parentNode.insertBefore(e, f);
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  'http://cdn.taboola.com/libtrc/gossiponthis/loader.js');
+</script>
+<!-- /END TABOOLA JSCRIPT> -->
+
 		<?php wp_head(); ?>
+		<link rel='stylesheet' id='screen-css'  href="http://gossiponthis.com/wp-content/themes/GoTTheme/style.css" type='text/css' media='screen' />
 
 	</head>
 	<body <?php body_class(); ?>>
