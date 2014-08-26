@@ -8,6 +8,11 @@
 				<a data-hot="weekly" href="#">This Week</a></li><li>
 				<a data-hot="monthly" href="#">This Month</a></li>
 		</ul>
+			
+			<!-- <div style="margin:5px;padding:10px;"><strong><em>TRENDING POSTS ARE UNDER MAINTENANCE &AMP; WILL BE BACK SOON.</em></strong></div> -->
+		
+<?php // if (function_exists('wpp_get_mostpopular')) wpp_get_mostpopular("range=daily&limit=6&order_by='views'&thumbnail_width=150&thumbnail_height=108&title_length=0&wpp_start='<div class=\"my-popular-posts\">'&wpp_end='</div>'&post_start='<div class=\"wpp-the-pop-post\">'&post_end='</div>'"); ?>
+		
 		<?php
 		//
 		//	check cache to see if popular posts are stored already
@@ -36,8 +41,8 @@
 				//	missing some variables will cause errors or notices
 				//
 				$instance['order_by'] 					 = 'views';
-				$instance['thumbnail']['width'] 		 = 122;
-				$instance['thumbnail']['height'] 		 = 89;
+				$instance['thumbnail']['width'] 		 = 150;
+				$instance['thumbnail']['height'] 		 = 110;
 				$instance['thumbnail']['active'] 		 = true;
 				$instance['stats_tag']['comment_count']  = false;
 				$instance['stats_tag']['author'] 		 = false;

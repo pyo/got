@@ -40,12 +40,14 @@
 	}
 	a{
 		color:#000;
+		font-family:$proxima-nova-condensed;
+		font-size:16px;
+		width:150px;
 		font-weight:700;
 		line-height:18px;
 		display:inline-block;
 		*display:inline;
 		*zoom:1;
-		width:180px; 
 		&.cat{
 			color:$salmon;
 			font-weight:400;
@@ -54,15 +56,14 @@
 			text-transform:uppercase;
 			font-size:12px;
 			line-height:1em;
-			padding:0;
+			padding:2px;
 		}
 		&.wpp-thumbnail{
+			width:150px;
+			height:109px;
 			margin-right:10px;
-			width:122px;
 			float:left;
 			border-right:1px solid #ddd;
-			height:88px;
-			width:122px;
 			overflow:hidden;
 			padding:0;
 		}
@@ -70,4 +71,10 @@
 	&:hover{
 		//background-color:#fafafa;
 	}
-} 
+}
+
+#hot-right-now .post-box:hover a.cat {
+	background:$salmon;
+	color:#fff;
+	text-decoration:none;
+}

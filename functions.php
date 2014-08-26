@@ -920,7 +920,18 @@
         }
         return $url;
     }
-
+	
+	function return_make_vertical() {
+    	global $post;
+    	global $wp_query;
+		
+		$term = wp_get_post_terms($post->ID, 'vertical');
+		
+		if($term) {
+			$term['term_link']	= get_term_link($term[0]);
+		}
+		if ($term['term_link']) echo '<a class="pinned_tag" href="' . $term['term_link'] . '">' . $term[0]->name . '</a>';
+	}
 
     function return_make_pinned_tag() {
     	global $post;
@@ -933,7 +944,7 @@
 			
 			if ($term) {
 				if($wp_query->is_page || $wp_query->is_single() || $wp_query->is_singular) {
-					$class = 'pinned_tag';
+					$class = 'pinned_vert';
 				} else {
 					$class = 'banner';
 				}

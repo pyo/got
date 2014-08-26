@@ -307,23 +307,29 @@ div.banner-wrapper{
 .single #primary .header-banner{
 	margin-bottom:10px;
 }
-.single a.pinned_tag{
+.single a.pinned_tag,.single a.pinned_vert{
 	display:inline-block;
 	*display:inline;
 	*zoom:1;
 	position:relative;
-	left:-10px;
+	top:10px;
 	background-color:$salmon;
 	color:#fff;
-	font-family:$proxima-nova;
+	font-family:$proxima-nova-condensed;
 	font-weight:700;
-	font-size:16px;
+	/*font-size:16px;*/
 	padding:10px;
-	margin-bottom:-10px;
 	text-transform:uppercase;
-	line-height:1.4em;
-	&:active, &:hover, &:focus, &:visited{
-		color:#fff;
+	&:active, &:hover, &:focus{
+		background-color:$salmon-hover;
+	}
+}
+.single a.pinned_vert{
+	background-color: #fff;
+	color:$salmon;
+	&:active, &:hover, &:focus{
+		text-decoration:underline;
+		background-color:#fff;
 	}
 }
 #primary .header-banner{

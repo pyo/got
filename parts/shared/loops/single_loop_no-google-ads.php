@@ -28,7 +28,7 @@
 			?>
 
 			<div class="cf">
-				<div class="alignleft"><?php echo return_make_pinned_tag(); ?></div>
+				<div class="alignleft"><?php echo return_make_vertical(); ?> <?php echo return_make_pinned_tag(); ?></div>
 				<?php if(current_user_can('edit_post')): ?>
 					
 					<div class="alignright">

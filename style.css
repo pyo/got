@@ -17,3 +17,54 @@ p.headline-subtitle {
 	font-size:20px!important;
 	font-weight:600;
 }
+
+.my-popular-posts {
+	margin-top:10px;
+}
+
+.my-popular-posts .wpp-the-pop-post {
+	padding:10px;
+	clear:both;
+	margin-bottom:10px;
+	min-height:110px;
+	background:#fff;
+	border:1px solid#ddd;
+	-webkit-box-shadow:0 3px 0 #efefef;
+	-moz-box-shadow:0 3px 0 #efefef;
+	box-shadow:0 3px 0 #efefef;
+}
+
+.my-popular-posts .wpp-the-pop-post:hover a {
+	color:#d7433f;
+}
+
+.my-popular-posts .wpp-the-pop-post:hover {
+	display:block;
+	cursor:pointer;
+	background:#fafafa!important;
+	border:1px solid #ccc;
+	-webkit-box-shadow:0 3px 0 #ddd;
+	-moz-box-shadow:0 3px 0 #ddd;
+	box-shadow:0 3px 0 #ddd;
+}
+
+span.wpp-comments {
+	display:none !important;
+}
+
+.my-popular-posts a img {
+	float: left;
+	margin-top:-10px;
+	margin-left:-10px;
+	margin-right:10px;
+}
+
+.my-popular-posts a.wpp-post-title {
+	font-family: "proxima-nova-alt-condensed", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size:16px;
+}
+
+.single-page-loop img, .two-up img {
+	width:100%;
+	height:auto;
+}
